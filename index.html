@@ -140,6 +140,7 @@
 		
 		//input
 		this.mouseDown = false;
+		this.mouseOver = false;
 		this.mouseX = 0;
 		this.mouseY = 0;
 		this.newMouseX = 0;
@@ -148,6 +149,8 @@
         canvas.onmousedown = function(event) { AnimatedHeader.handleMouseDown(event); };
         document.onmouseup = function(event) { AnimatedHeader.handleMouseUp(event); };
         document.onmousemove = function(event) { AnimatedHeader.handleMouseMove(event); };
+		canvas.onmouseover = function(event) { AnimatedHeader.handleMouseOver(event); };
+		canvas.onmouseout = function(event) { AnimatedHeader.handleMouseOut(event); };
     }
 
     AnimatedHeader.prototype.handleMouseDown = function(event) {
@@ -156,6 +159,14 @@
 
     AnimatedHeader.prototype.handleMouseUp = function(event) {
         this.mouseDown = false;
+    }
+	
+	AnimatedHeader.prototype.handleMouseOver = function(event) {
+        this.mouseOver = true;
+    }
+	
+	AnimatedHeader.prototype.handleMouseOut = function(event) {
+        this.mouseOver = false;
     }
 
     AnimatedHeader.prototype.handleMouseMove = function(event) {
@@ -168,13 +179,20 @@
 		var deltaY = this.newMouseY -this.mouseY;
 
 		deltaX *= 2.5;
-		if(this.mouseDown == true) {
-			if (this.rotSpeed < 0 && deltaX < 0)
-				this.rotSpeed = min(this.rotSpeed, deltaX);
-			else if (this.rotSpeed > 0 && deltaX > 0)
-				this.rotSpeed = max(this.rotSpeed, deltaX);
-			else this.rotSpeed = deltaX;
+		if (this.mouseOver) {
+			if (this.mouseDown == false && deltaX != 0.0) {
+				if (this.rotSpeed < 0 && deltaX < 0)
+					this.rotSpeed = min(this.rotSpeed, deltaX);
+				else if (this.rotSpeed > 0 && deltaX > 0)
+					this.rotSpeed = max(this.rotSpeed, deltaX);
+				else this.rotSpeed = deltaX;
+			}
+			
+			if (this.mouseDown) {
+				
+			}
 		}
+		
 		this.mouseX = this.newMouseX;
 		this.mouseY = this.newMouseY;
     }
