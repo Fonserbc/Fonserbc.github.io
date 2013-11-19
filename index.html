@@ -124,9 +124,12 @@
 		this.mvMatrixStack = [];
 		this.drawColor = vec3.fromValues(0.0,0.0,0.0);
 
-		//Projection Matrix, ZNEAR = 3, ZFAR = 17, FOVY = 45
+		this.FOVY = 45;
+		this.ZNEAR = 3;
+		this.ZFAR = 17;
+		
 		this.pMatrix = mat4.create();
-		mat4.perspective(this.pMatrix,45, this.gl.viewportWidth / this.gl.viewportHeight, 3, 17);
+		mat4.perspective(this.pMatrix,this.FOVY, this.gl.viewportWidth / this.gl.viewportHeight, this.ZNEAR, this.ZFAR);
 
 		this.timer = new Timer();
 
@@ -141,6 +144,7 @@
 		//input
 		this.mouseDown = false;
 		this.mouseOver = false;
+		this.canMove = false;
 		this.mouseX = 0;
 		this.mouseY = 0;
 		this.newMouseX = 0;
@@ -162,16 +166,28 @@
     }
 	
 	AnimatedHeader.prototype.handleMouseOver = function(event) {
-        this.mouseOver = true;
+		this.mouseOver = true;
+	
+		if (event.clientX > document.body.clientWidth/2.0 - canvas.height/2.0 &&
+			event.clientX < document.body.clientWidth/2.0 + canvas.height/2.0) {
+			this.canMove = true;
+		}
     }
 	
 	AnimatedHeader.prototype.handleMouseOut = function(event) {
         this.mouseOver = false;
+		this.canMove = false;
     }
 
     AnimatedHeader.prototype.handleMouseMove = function(event) {
         this.newMouseX = event.clientX;
         this.newMouseY = event.clientY;
+		
+		if (event.clientX > document.body.clientWidth/2.0 - canvas.height/2.0 &&
+			event.clientX < document.body.clientWidth/2.0 + canvas.height/2.0) {
+			this.canMove = true;
+		}
+		else this.canMove = false;
     }
 
     AnimatedHeader.prototype.handleMouse = function(deltaTime) {
@@ -179,7 +195,7 @@
 		var deltaY = this.newMouseY -this.mouseY;
 
 		deltaX *= 2.5;
-		if (this.mouseOver) {
+		if (this.mouseOver && this.canMove) {
 			if (this.mouseDown == false && deltaX != 0.0) {
 				if (this.rotSpeed < 0 && deltaX < 0)
 					this.rotSpeed = min(this.rotSpeed, deltaX);
@@ -322,12 +338,9 @@
 		//cube
 		this.mvPushMatrix();
 			mat4.rotate(this.mvMatrix, this.mvMatrix, degToRad(this.rot), [0, 1, 0]);
-			//Position rotation of cube to look nice
-			mat4.rotate(this.mvMatrix, this.mvMatrix, degToRad(90), [1, 0, 0]);
-			mat4.rotate(this.mvMatrix, this.mvMatrix, degToRad(-11.25), [0, 1, 0]);
-			mat4.rotate(this.mvMatrix, this.mvMatrix, degToRad(45), [0, 1, 0]);
-			mat4.rotate(this.mvMatrix, this.mvMatrix, degToRad(45), [1, 0, 0]);
-			mat4.scale(this.mvMatrix, this.mvMatrix, [5,5,5]);
+			
+			mat4.mul(this.mvMatrix, this.mvMatrix, this.cube.modelM);
+			
 			this.setMatrixUniforms();
 			this.cube.draw(this.gl,this.shaderProgram);
 		this.mvPopMatrix();

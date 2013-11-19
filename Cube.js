@@ -2,6 +2,15 @@
  
 	this.texture = loadTexture(gl, assetManager.getAsset(textureSrc));
 	
+	this.modelM = mat4.create();
+	//BASE MODEL MATRIX
+	mat4.identity(this.modelM);
+	mat4.rotate(this.modelM, this.modelM, degToRad(90), [1, 0, 0]);
+	mat4.rotate(this.modelM, this.modelM, degToRad(-11.25), [0, 1, 0]);
+	mat4.rotate(this.modelM, this.modelM, degToRad(45), [0, 1, 0]);
+	mat4.rotate(this.modelM, this.modelM, degToRad(45), [1, 0, 0]);
+	mat4.scale(this.modelM, this.modelM, [5,5,5]);
+	
 	//POSITIONS
 	this.VertexPositionBuffer = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, this.VertexPositionBuffer);
