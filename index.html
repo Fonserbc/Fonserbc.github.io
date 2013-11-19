@@ -9,6 +9,8 @@
 
 <!-- Vertex shader -->
 <script id="shader-vs" type="x-shader/x-vertex">
+	precision mediump float;
+
     attribute vec3 aPosition;
     attribute vec3 aNormal;
     attribute vec2 aTexCoord;
@@ -16,17 +18,18 @@
     uniform mat4 uMVMatrix;
     uniform mat4 uPMatrix;
     uniform mat3 uNMatrix;
+	uniform vec3 uLightPos;
 
-    vec3 lightDir = vec3(0.0,0.0,1.0);
-
-    varying float vlightApport;
+    varying float vlightNormalApport;
     varying vec2 vTexCoord;
+	varying vec3 vPos;
 
     void main(void) {
         vec4 mvPosition = uMVMatrix * vec4(aPosition, 1.0);
+		vPos = mvPosition.xyz;
 
         vec3 transformedNormal = uNMatrix * normalize(aNormal);
-        vlightApport = max(dot(transformedNormal, lightDir), 0.0);
+        vlightNormalApport = dot(normalize(transformedNormal), normalize(uLightPos - mvPosition.xyz));
 
         gl_Position = uPMatrix * mvPosition;
 			
@@ -38,14 +41,22 @@
 <script id="shader-fs" type="x-shader/x-fragment">
     precision mediump float;
 
-    varying float vlightApport;
+	uniform vec3 uLightPos;
+	
+    varying float vlightNormalApport;
 	varying vec2 vTexCoord;
+	varying vec3 vPos;
 
 	uniform sampler2D sampler;
 	
     void main(void) {
-        //gl_FragColor = vec4(texture2D(sampler, vTexCoord).rgb * vlightApport, 1.0);
-		gl_FragColor = texture2D(sampler, vTexCoord);
+		float lightDist = length(uLightPos - vPos);
+		float minLightDist = 30.0;
+		float maxLightDist = 17.5;
+		float lightDistanceApport = (1.0 - (lightDist - maxLightDist)/(minLightDist - maxLightDist));
+	
+        gl_FragColor = vec4(texture2D(sampler, vTexCoord).rgb * lightDistanceApport * vlightNormalApport, 1.0);
+		//gl_FragColor = texture2D(sampler, vTexCoord);
     }
 </script>
 
@@ -127,6 +138,7 @@
 		this.FOVY = 45;
 		this.ZNEAR = 3;
 		this.ZFAR = 17;
+		this.cameraZ = 10.0;
 		
 		this.pMatrix = mat4.create();
 		mat4.perspective(this.pMatrix,this.FOVY, this.gl.viewportWidth / this.gl.viewportHeight, this.ZNEAR, this.ZFAR);
@@ -134,12 +146,14 @@
 		this.timer = new Timer();
 
 		//cube
-		this.cube = new Cube(this.gl, "fon.png");
+		this.cube = new Cube(this.gl, "fon-light.png");
 		this.rot = 0.0;
-		this.rotSpeed = 100.0;
+			this.rotSpeed = 100.0; // Initial rotation Speed
 
 		this.gl.enable(this.gl.DEPTH_TEST);
 		this.gl.clearColor(210.0/255.0,250.0/255.0,250.0/255.0, 1.0);
+		
+		this.lightPos = this.canvasToWorldSpace([canvas.width/2, canvas.height/2]);
 		
 		//input
 		this.mouseDown = false;
@@ -156,6 +170,10 @@
 		canvas.onmouseover = function(event) { AnimatedHeader.handleMouseOver(event); };
 		canvas.onmouseout = function(event) { AnimatedHeader.handleMouseOut(event); };
     }
+	
+	AnimatedHeader.prototype.canvasToWorldSpace = function(coord) {
+		return [0,0,this.cameraZ];
+	}
 
     AnimatedHeader.prototype.handleMouseDown = function(event) {
         this.mouseDown = true;
@@ -269,7 +287,8 @@
         this.gl.linkProgram(program);
 
         if (!this.gl.getProgramParameter(program, this.gl.LINK_STATUS)) {
-            alert("No s'han pogut inicialitzar els shaders");
+            alert("Could not init shaders");
+			alert(this.gl.getProgramInfoLog(program));
         }
 
         this.gl.useProgram(program);
@@ -287,10 +306,9 @@
         program.pMatrixUniform = this.gl.getUniformLocation(program, "uPMatrix");
         program.mvMatrixUniform = this.gl.getUniformLocation(program, "uMVMatrix");
         program.nMatrixUniform = this.gl.getUniformLocation(program, "uNMatrix");
-        program.colorUniform = this.gl.getUniformLocation(program, "uColor")
+		program.lightPosUniform = this.gl.getUniformLocation(program, "uLightPos");
         program.samplerUniform = this.gl.getUniformLocation(program, "sampler");
-
-
+		
 		return program;
     }
 
@@ -313,7 +331,7 @@
         var normalMatrix = mat3.create();
         mat3.normalFromMat4(normalMatrix, this.mvMatrix);
         this.gl.uniformMatrix3fv(this.shaderProgram.nMatrixUniform, false, normalMatrix);
-		this.gl.uniform3fv(this.shaderProgram.colorUniform,this.drawColor)
+		this.gl.uniform3fv(this.shaderProgram.lightPosUniform, this.lightPos);
     }
 
     AnimatedHeader.prototype.update = function() {
@@ -333,7 +351,7 @@
 		mat4.identity(this.mvMatrix);
 		
 		//camera
-		mat4.translate(this.mvMatrix, this.mvMatrix,[0,0,-10]);
+		mat4.translate(this.mvMatrix, this.mvMatrix,[0,0,-this.cameraZ]);
 		
 		//cube
 		this.mvPushMatrix();
@@ -364,6 +382,7 @@
 		assetManager = new AssetManager();
 		
 		assetManager.queueDownload("fon.png");
+		assetManager.queueDownload("fon-light.png");
 		
 		assetManager.downloadAll(function() {
 			AnimatedHeader = new AnimatedHeader(canvas);
