@@ -51,8 +51,8 @@
 	
     void main(void) {
 		float lightDist = length(uLightPos - vPos);
-		float minLightDist = 30.0;
-		float maxLightDist = 17.5;
+		float minLightDist = 27.5;
+		float maxLightDist = 20.0;
 		float lightDistanceApport = (1.0 - (lightDist - maxLightDist)/(minLightDist - maxLightDist));
 	
         gl_FragColor = vec4(texture2D(sampler, vTexCoord).rgb * lightDistanceApport * vlightNormalApport, 1.0);
@@ -139,9 +139,15 @@
 		this.ZNEAR = 3;
 		this.ZFAR = 17;
 		this.cameraZ = 10.0;
+		this.ratio = this.gl.viewportWidth / this.gl.viewportHeight;
+		
+		// For light purpouses
+		this.nearPlaneY = Math.tan(degToRad(this.FOVY)/2.0)*this.ZNEAR;
+		this.nearPlaneX = abs(Math.tan(degToRad(this.FOVY*this.ratio)/2.0))*this.ZNEAR;
+		this.canvasRect = canvas.getBoundingClientRect();
 		
 		this.pMatrix = mat4.create();
-		mat4.perspective(this.pMatrix,this.FOVY, this.gl.viewportWidth / this.gl.viewportHeight, this.ZNEAR, this.ZFAR);
+		mat4.perspective(this.pMatrix,this.FOVY, this.ratio, this.ZNEAR, this.ZFAR);
 
 		this.timer = new Timer();
 
@@ -153,7 +159,7 @@
 		this.gl.enable(this.gl.DEPTH_TEST);
 		this.gl.clearColor(210.0/255.0,250.0/255.0,250.0/255.0, 1.0);
 		
-		this.lightPos = this.canvasToWorldSpace([canvas.width/2, canvas.height/2]);
+		this.lightPos = this.canvasToWorldSpace(canvas.width/2.0, canvas.height/2.0);
 		
 		//input
 		this.mouseDown = false;
@@ -165,17 +171,19 @@
 		this.newMouseY = 0;	
 		var AnimatedHeader = this;
         canvas.onmousedown = function(event) { AnimatedHeader.handleMouseDown(event); };
-        document.onmouseup = function(event) { AnimatedHeader.handleMouseUp(event); };
+        canvas.onmouseup = function(event) { AnimatedHeader.handleMouseUp(event); };
         document.onmousemove = function(event) { AnimatedHeader.handleMouseMove(event); };
 		canvas.onmouseover = function(event) { AnimatedHeader.handleMouseOver(event); };
 		canvas.onmouseout = function(event) { AnimatedHeader.handleMouseOut(event); };
     }
 	
-	AnimatedHeader.prototype.canvasToWorldSpace = function(coord) {
-		return [0,0,this.cameraZ];
+	AnimatedHeader.prototype.canvasToWorldSpace = function(x, y) {
+		var cx = (x - canvas.width/2.0)/(canvas.width/2.0)*this.nearPlaneX;
+		var cy = -(y - canvas.height/2.0)/(canvas.height/2.0)*this.nearPlaneY;
+		return [cx,cy,this.cameraZ];
 	}
 
-    AnimatedHeader.prototype.handleMouseDown = function(event) {
+    AnimatedHeader.prototype.handleMouseDown = function(event) {		
         this.mouseDown = true;
     }
 
@@ -221,11 +229,9 @@
 					this.rotSpeed = max(this.rotSpeed, deltaX);
 				else this.rotSpeed = deltaX;
 			}
-			
-			if (this.mouseDown) {
-				
-			}
 		}
+		
+		this.lightPos = this.canvasToWorldSpace(this.mouseX - this.canvasRect.left, this.mouseY - this.canvasRect.top);
 		
 		this.mouseX = this.newMouseX;
 		this.mouseY = this.newMouseY;
