@@ -116,7 +116,7 @@ function AnimatedHeader(canvas) {
 AnimatedHeader.prototype.canvasToWorldSpace = function(x, y) {
 	var cx = (x - canvas.width/2.0)/(canvas.width/2.0)*this.nearPlaneX;
 	var cy = -(y - canvas.height/2.0)/(canvas.height/2.0)*this.nearPlaneY;
-	return [cx,cy,this.cameraZ];
+	return [cx,cy,this.cameraZ*0.5];
 }
 
 AnimatedHeader.prototype.handleMouseDown = function(event) {		
@@ -175,7 +175,7 @@ AnimatedHeader.prototype.handleMouse = function(deltaTime) {
 
 AnimatedHeader.prototype.initWebGL = function(canvas) {
 	try {
-		var gl = canvas.getContext("experimental-webgl");
+		var gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 		
 		gl.viewportWidth = canvas.width;
 		gl.viewportHeight = canvas.height;

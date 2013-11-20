@@ -64,14 +64,13 @@ canvas {
 
 	uniform sampler2D sampler;
 	
-    void main(void) {
+    void main(void) {		
 		float lightDist = length(uLightPos - vPos);
 		float minLightDist = 27.5;
-		float maxLightDist = 20.0;
+		float maxLightDist = 15.0;
 		float lightDistanceApport = (1.0 - (lightDist - maxLightDist)/(minLightDist - maxLightDist));
 	
         gl_FragColor = vec4(texture2D(sampler, vTexCoord).rgb * lightDistanceApport * vlightNormalApport, 1.0);
-		//gl_FragColor = texture2D(sampler, vTexCoord);
     }
 </script>
 <!-- AnimatedHeader -->
@@ -81,7 +80,9 @@ canvas {
 
 <!-- Some credit to Towerthousand for his WebGL github repo at https://github.com/Towerthousand/WebGL-Test/ which helped <3 -->
 <body onload="initHeader();">
-	<canvas id="canvas" width="256" height="256"></canvas>
+	<canvas id="canvas" width="256" height="256">
+        Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+    </canvas>
 
 	<div>
 		<h2>fonserbc</h2>
