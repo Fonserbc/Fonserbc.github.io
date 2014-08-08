@@ -1,0 +1,3 @@
+[submodule "groovy-sprites"]
+	path = groovy-sprites
+	url = https://github.com/Fonserbc/groovy-sprites
