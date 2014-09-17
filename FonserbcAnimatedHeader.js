@@ -319,8 +319,6 @@ function loop() {
 
 function initHeader() {
 	var canvas = document.getElementById("canvas");
-	canvas.width = document.body.clientWidth - 20; // Hax20r
-	canvas.height = document.body.clientWidth /5;
 	
 	assetManager = new AssetManager();
 	
