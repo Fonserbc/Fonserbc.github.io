@@ -1,3 +1,7 @@
+/**
+ * This code would have taken longer without Towerthousand's nice repo at https://github.com/Towerthousand/Webgl-test
+ */
+
 /*********GOOGLE CODE*********/
 /**
  * Provides requestAnimationFrame in a cross browser way.
