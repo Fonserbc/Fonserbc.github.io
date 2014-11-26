@@ -1,3 +1,7 @@
+/**
+ * This code would have taken longer without Towerthousand's nice repo at https://github.com/Towerthousand/Webgl-test
+ */
+
 /*********GOOGLE CODE*********/
 /**
  * Provides requestAnimationFrame in a cross browser way.
@@ -319,8 +323,6 @@ function loop() {
 
 function initHeader() {
 	var canvas = document.getElementById("canvas");
-	canvas.width = document.body.clientWidth - 20; // Hax20r
-	canvas.height = document.body.clientWidth /5;
 	
 	assetManager = new AssetManager();
 	
