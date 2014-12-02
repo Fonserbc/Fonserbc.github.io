@@ -4,3 +4,6 @@
 [submodule "fpg"]
 	path = fpg
 	url = https://github.com/Fonserbc/fpg
+[submodule "ballbox"]
+	path = ballbox
+	url = https://github.com/Fonserbc/ballbox
