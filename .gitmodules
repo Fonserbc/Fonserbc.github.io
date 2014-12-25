@@ -7,3 +7,6 @@
 [submodule "ballbox"]
 	path = ballbox
 	url = https://github.com/Fonserbc/ballbox
+[submodule "where-is-santa"]
+	path = where-is-santa
+	url = https://github.com/Fonserbc/where-is-santa
