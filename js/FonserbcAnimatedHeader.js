@@ -163,11 +163,10 @@ AnimatedHeader.prototype.handleMouse = function(deltaTime) {
 	deltaX *= 2.5;
 	if (this.mouseOver && this.canMove) {
 		if (this.mouseDown == false && deltaX != 0.0) {
-			if (this.rotSpeed < 0 && deltaX < 0)
-				this.rotSpeed = min(this.rotSpeed, deltaX);
-			else if (this.rotSpeed > 0 && deltaX > 0)
+			if (deltaX < 0)
+				this.rotSpeed = max(0, this.rotSpeed + deltaTime*deltaX*10);
+			else (deltaX > 0)
 				this.rotSpeed = max(this.rotSpeed, deltaX);
-			else this.rotSpeed = deltaX;
 		}
 	}
 	
@@ -334,3 +333,5 @@ function initHeader() {
 		loop();
 	});
 }
+
+initHeader();

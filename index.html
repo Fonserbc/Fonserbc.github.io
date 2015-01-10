@@ -22,6 +22,49 @@ div {
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Fonserbc</title>
+<link rel="shortcut icon" href="fon.ico" >
+</head>
+
+<body>
+	<canvas id="canvas" width="256" height="256">
+        Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element :(
+    </canvas>
+
+	<div>
+		<h1>About me</h1>
+		<p>1992' Deltebre, Barcelona, Catalunya, Spain. My name is Ferran Bertomeu Castells, also known as <i><b>fonserbc</b></i>. I usually live in Barcelona, though I've lived in Stockholm and Taipei.</p>
+		<p>I studied Computer Science in <i>Facultat d'Informàtica de Barcelona</i> (FIB) of the <i>Universitat Politécnica de Catalunya</i>(UPC) and in <i>Kungliga Tekniska Högskolan</i> (KTH).</p>
+		<p>I worked at <a href="https://www.goocreate.com/"><b>Goo Technologies</b></a> as developer on their game projects.</p>
+		<p>I'm a proud member of the student association <a href="https://vgafib.upc.es"><b>VGAFIB</b></a> dedicated to the promotion and introduction of video game development on computer science students on my Faculty. I was secretary for a while there :)</p>
+		<p>I like music. I like playing music. I can move myself around the keyboard and I actively play the guitar or anything that has strings that can be strummed or plucked. I like reading. I enjoy Terry Pratchett and, when it is possible, George RR Martin.</p>
+		
+		<h1>What I've done</h1>
+		<ul>
+			<li><p>Two little Minecraft mods when it was cool: <a href="http://www.youtube.com/watch?v=ToOmW_Easd0">Redstone Blocks Mod</a>, and <a href="http://www.minecraftforum.net/topic/1443734-151-custom-creative-inventory-tab/">Custom Creative Inventory Tab</a>.</p></li>
+			<li><p><a href="https://www.youtube.com/watch?v=w8ej1xvH-2I"><i>ETYLT</i> - Every Time You Lose Time</a> with a group of friends from VGAFIB, which we won the competition <i>Wiideojuegos 2012</i>.</p></li>
+			<li>Ludum Dares:<ul>
+				<li><p>Helped with <a href="http://www.ludumdare.com/compo/2012/08/28/leptons-quest-postmortem/">Lepton's Quest</a> within the <a href="http://indiesquish.com/">Indiesquish</a> community with the one of the minecraft mods above.</p></li>
+				<li><p><a href="http://www.ludumdare.com/compo/ludum-dare-25/?action=preview&uid=16828">Meteors: Look at them go</a> on LD25.</p></li>
+				<li><p><a href="http://indiesquish.com/2013/04/29/jetpack-jester-indiesquish-ld26-jam-entry/">Jetpack Jester</a> again with the Indiesquish community, this time game programming.</p></li>
+				<li><p><a href="http://www.ludumdare.com/compo/ludum-dare-30/?action=preview&uid=16828">Trust Music</a> on LD30, play it <a href="//fonserbc.github.io/trust-music">here</a> better.</p></li>
+				<li><p><a href="http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=16828"><b>GAMER TOAD*</b> *actually flea</a></i> on LD31, play it <a href="//fonserbc.itch.io/gamer-toad">here</a> better.</p></li>
+			</ul></li>
+			<li>Global Game Jams:<ul>
+				<li><p><a href="https://vgafib.upc.es/public/missingBeat/Webplayer/Webplayer.html">The missing beat</a> <a href="http://2013.globalgamejam.org/2013/missing-beat">on GGJ</a> Barcelona 2013.</p></li>
+				<li><p><a href="http://globalgamejam.org/2014/games/whatever-you-see">Whatever you see</a> in GGJ <a href="http://globalgamejam.org/2014/jam-sites/global-game-jam-stockholm-tekniska-museet">Stockholm</a> 2014.</p></li>
+			</ul></li>
+		</ul>
+		
+		<p>I have been teaching Unity to CS students in the my faculty on after-period courses organized by VGAFIB several times.</p>
+		<p>See more of what I've done on <a href="https://github.com/Fonserbc">github</a>.</p>
+		
+		<h1>What I'm doing</h1>
+		<p>I'm working on "FORGET THE BRAKES", a game over at <a href="http://multitrackdriftinggame.com/">http://multitrackdriftinggame.com/</a>, you can follow the devlog <a href="http://forums.tigsource.com/index.php?topic=43503.0">here!</a></a>.</p>
+
+		<h1>Contact</h1>
+		<p>You can find me at <a href="https://twitter.com/fonserbc">fonserbc</a>.</p>
+		<p>Or <a href="mailto:fonserbc@gmail.com">email me</a>.</p>
+	</div>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -34,9 +77,9 @@ div {
 
 </script>
 
-<script type="text/javascript" src="gl-matrix-min.js"></script>
-<script type="text/javascript" src="AssetManager.js"></script>
-<script type="text/javascript" src="Cube.js"></script>
+<script type="text/javascript" src="js/gl-matrix-min.js"></script>
+<script type="text/javascript" src="js/AssetManager.js"></script>
+<script type="text/javascript" src="js/Cube.js"></script>
 
 <!-- Vertex shader -->
 <script id="shader-vs" type="x-shader/x-vertex">
@@ -80,8 +123,10 @@ div {
 
 	uniform sampler2D sampler;
 	
-    void main(void) {		
-		float lightDist = length(uLightPos - vPos);
+    void main(void) {
+
+    	vec3 lightVec = uLightPos - vPos;
+		float lightDist = length(lightVec);
 		float minLightDist = 27.5;
 		float maxLightDist = 15.0;
 		float lightDistanceApport = (1.0 - (lightDist - maxLightDist)/(minLightDist - maxLightDist));
@@ -90,47 +135,6 @@ div {
     }
 </script>
 <!-- AnimatedHeader -->
-<script type="text/javascript" src="FonserbcAnimatedHeader.js"></script>
-
-<link rel="shortcut icon" href="fon.ico" >
-</head>
-
-<!-- Some credit to Towerthousand for his WebGL github repo at https://github.com/Towerthousand/WebGL-Test/ which helped <3 -->
-<body onload="initHeader();">
-	<canvas id="canvas" width="256" height="256">
-        Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
-    </canvas>
-
-	<div>
-		<h2>About me</h2>
-		<p>1992' Deltebre, Barcelona, Catalunya, Spain.</p>
-		<p>My name is Ferran Bertomeu Castells, also known as <i><b>fonserbc</b></i>.</p>
-		<p>I studied Computer Science in <i>Facultat d'Informàtica de Barcelona</i> (FIB) of the <i>Universitat Politécnica de Catalunya</i>(UPC) and in <i>Kungliga Tekniska Högskolan</i> (KTH).</p>
-		<p>I worked at <a href="https://www.goocreate.com/"><b>Goo Technologies</b></a> as developer on their game projects.</p>
-		<p>I usually live near Barcelona.</p>
-		<p>I'm a proud member of the student association <a href="https://vgafib.upc.es"><b>VGAFIB</b></a> dedicated to the promotion and introduction of video game development on computer science students on my Faculty. I was secretary for a while there :)</p>
-		<p>I like music. I like playing music. I can move myself around the keyboard and I actively play the guitar or anything that has strings that can be strummed or plucked.</p>
-		<p>I like reading. I enjoy Terry Pratchett and, when it is possible, George RR Martin.</p>
-		
-		<h2>What I've done</h2>
-		<p>In cronological order:</p>
-		<p>Two little Minecraft mods when it was cool: <a href="http://www.youtube.com/watch?v=ToOmW_Easd0">Redstone Blocks Mod</a>, and <a href="http://www.minecraftforum.net/topic/1443734-151-custom-creative-inventory-tab/">Custom Creative Inventory Tab</a>.</p>
-		<p>Helped with <a href="http://www.ludumdare.com/compo/2012/08/28/leptons-quest-postmortem/">Lepton's Quest</a> within the <a href="http://indiesquish.com/">Indiesquish</a> community with the one of the minecraft mods before.</p>
-		<p><a href="http://www.ludumdare.com/compo/ludum-dare-25/?action=preview&uid=16828">Meteors: Look at them go</a> on LD25.</p>
-		<p><a href="http://indiesquish.com/2013/04/29/jetpack-jester-indiesquish-ld26-jam-entry/">Jetpack Jester</a> again with the Indiesquish community, this time game programming.</p>
-		<p><a href="https://github.com/Fonserbc/ETLYT"><i>ETYLT</i> - Every Time You Lose Time</a> with a group of friends from VGAFIB, which we won the competition <i>Wiideojuegos 2012</i>.</p>
-		<p><a href="https://vgafib.upc.es/public/missingBeat/Webplayer/Webplayer.html">The missing beat</a> <a href="http://2013.globalgamejam.org/2013/missing-beat">on GGJ</a> Barcelona 2013.</p>
-		<p><a href="http://globalgamejam.org/2014/games/whatever-you-see">Whatever you see</a> in GGJ <a href="http://globalgamejam.org/2014/jam-sites/global-game-jam-stockholm-tekniska-museet">Stockholm</a> 2014.</p>
-		<p><a href="http://www.ludumdare.com/compo/ludum-dare-30/?action=preview&uid=16828">Trust Music</a> on LD30, play it <a href="//fonserbc.github.io/trust-music">here</a> better.</p>
-		<p><a href="http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=16828"><b>GAMER TOAD*</b> *actually flea</a></i> on LD31, play it <a href="//fonserbc.itch.io/gamer-toad">here</a> better.</p>
-		<p></p>
-		<p>I'm working on a game over at <a href="http://multitrackdriftinggame.com/">http://multitrackdriftinggame.com/</a>, you can follow the devblog <a href="http://forums.tigsource.com/index.php?topic=43503.0">here</a></a>.</p>
-		<p>I have been teaching Unity to CS students in the my faculty on after-period courses organized by VGAFIB several times</p>
-		<p>See more on <a href="https://github.com/Fonserbc">github</a>.</p>
-		
-		<h2>Contact</h2>
-		<p>You can find me at <a href="https://twitter.com/fonserbc">fonserbc</a>.</p>
-		<p>Or <a href="mailto:fonserbc@gmail.com">email me</a>.</p>
-	</div>
+<script type="text/javascript" src="js/FonserbcAnimatedHeader.js"></script>
 </body>
 </html>
