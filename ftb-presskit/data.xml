@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- example file containing base tags -->
+
+<game>	
+	<title>Moss of the Time</title>
+	<founding-date>December, 2014</founding-date>
+	<website>http://fonserbc.github.io/moss-of-the-time/</website>
+	<based-in>Barcelona (Spain), as well as 高雄 (Taiwan) and now Amsterdam</based-in>
+	
+	<press-contact>fonserbc@gmail.com</press-contact>
+	<phone>+34 696 122 663</phone>
+	<address>
+		<line>C/ Sant Martí de l'Erm</line>
+		<line>29 Bxs 2a</line>
+		<line>08970 Sant Joan Despí, BARCELONA, SPAIN</line>
+	</address>
+
+	<socials>
+		<social>
+			<name>twitter.com/MossOfTheTime</name>
+			<link>twitter.com/MossOfTheTime</link>
+		</social>
+<!--		<social>
+			<name>facebook.com/MyCompanyName</name>
+			<link>facebook.com/MyCompanyName</link>
+		</social> -->
+		<social>
+			<name>Skype</name>
+			<link>callto:fonserbc</link>
+		</social>
+	</socials>
+
+	<description>	
+		We're studio couple, and we make games moss of the time.
+	</description>
+		
+	<histories>
+		<history>
+			<header>How the team formed</header>
+			<text>We met in Stockholm, as Ferran was starting to develop "Forget The Brakes!" idea and game concept. Since then we have been working on the project together and decided to start up a development group, named since as "Moss of the Time"</text>
+		</history>
+	</histories>
+
+	<projects>
+			<project>
+				<header>Forget The Brakes!</header>
+				<text>A game about driving a train without brakes by Multi-Track Drifting</text>
+				<website>Website</website>
+				<link>http://ForgetTheBrak.es</link>
+			</project>
+	</projects>
+		
+	<trailers>
+		<trailer>
+			<name>Forget the Brakes! - Teaser trailer</name>
+			<youtube>07LYd-Jbu6I</youtube>
+		</trailer>
+	</trailers>
+	
+	<awards>
+<!--		<award>
+			<description>Winner in this highly relevant contest.</description>
+			<info>Award Location, 20 October, 1989</info>
+		</award>
+		<award>
+			<description>Nomination for this prestigious award.</description>
+			<info>Award Ceremony, 4 December, 1991</info>
+		</award>
+		<award>
+			<description>Winner in this highly relevant contest.</description>
+			<info>Award Location, 20 October, 1989</info>
+		</award>
+		<award>
+			<description>Nomination for this prestigious award.</description>
+			<info>Award Ceremony, 4 December, 1991</info>
+		</award> -->
+	</awards>
+	
+	<quotes>
+		<quote>
+			<description>Once you start playing you cannot stop, you're out of brakes</description>
+			<name>Jordi Santiago "Bud"</name>
+			<website>Website</website>
+			<link>http://thatguystudio.com/about/</link>
+		</quote>
+	</quotes>
+	
+	<press-can-request-copy>TRUE</press-can-request-copy> <!-- can be true or false -->
+	<monetization-permission>monetize</monetization-permission> <!-- can be: 	false (no video allowed),
+																			 	ask (permission on case-per-case basis),
+																			 	non-commercial (no monetization allowed),
+																			 	monetize (full permission) -->	
+	<additionals>
+		<additional>
+			<title>Forget the Brakes! game website</title>
+			<description>You can play the game online here</description>
+			<link>http://ForgetTheBrak.es</link>
+		</additional>
+	</additionals>
+	
+	<credits>
+		<credit>
+			<person>YenTing Lo</person>
+			<role>Musician and Artist, Freelancer</role>
+			<website>www.yentinglo.net</website>
+		</credit>
+		<credit>
+			<person>Ferran Bertomeu Castells</person>
+			<website>www.fonserbc.net</website>
+			<role>Game Developer, Freelancer</role>
+		</credit>
+	</credits>
+	
+	<contacts>
+		<contact>
+			<name>Inquiries</name>
+			<mail>fonserbc@gmail.com</mail>
+		</contact>
+		<contact>
+			<name>Twitter</name>
+			<link>http://twitter.com/MossOfTheTime</link>
+		</contact>
+		<contact>
+			<name>Web</name>
+			<link>http://fonserbc.github.io/moss-of-the-time/</link>
+		</contact>
+	</contacts>
+</game>
