@@ -23,6 +23,12 @@ div {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Fonserbc</title>
 <link rel="shortcut icon" href="fon.ico" >
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+<script type="text/javascript">
+	function wantToSendMail () {
+		return CryptoJS.AES.decrypt("U2FsdGVkX1+5gKfiQdRwVbMPSk8zRQULptjr+peoDsueyGOkyDXpawYV2JJ0nnpZ", "Please bots and crawlers stay out").toString(CryptoJS.enc.Utf8);
+	}
+</script>
 </head>
 
 <body>
@@ -54,18 +60,23 @@ div {
 				<li><p><a href="https://vgafib.upc.es/public/missingBeat/Webplayer/Webplayer.html">The missing beat</a> <a href="http://2013.globalgamejam.org/2013/missing-beat">on GGJ</a> Barcelona 2013.</p></li>
 				<li><p><a href="http://globalgamejam.org/2014/games/whatever-you-see">Whatever you see</a> in GGJ <a href="http://globalgamejam.org/2014/jam-sites/global-game-jam-stockholm-tekniska-museet">Stockholm</a> 2014.</p></li>
 				<li><p><a href="http://globalgamejam.org/2015/games/waapdoobeedoo">WaapDooBeeDoo</a> in <a href="https://gamejambcn.com/">GameJamBarcelona</a> 2015.</p></li>
+				<li><p><a href="http://globalgamejam.org/2016/games/notengoluck">NotengoLuck</a> in <a href="https://gamejambcn.com/">GameJamBarcelona</a> 2016, where I was part of the organization</p></li>
+			</ul></li>
+			<li>Games I released:<ul>
+				<li><p><i>FORGET THE BRAKES! We'll be multi-track drifting!</i> over at <a href="http://ForgetTheBrak.es">http:/ForgetTheBrak.es</a>, you can see the devlog <a href="http://forums.tigsource.com/index.php?topic=43503.0">here</a></a>.</p></li>
 			</ul></li>
 		</ul>
 		
 		<p>I have been teaching Unity to CS students in the my faculty on after-period courses organized by VGAFIB several times.</p>
-		<p>See more of what I've done on <a href="https://github.com/Fonserbc">github</a>.</p>
+		<p>See more of what I've done on <a href="https://fonserbc.itch.io">itch.io</a> or on <a href="https://github.com/Fonserbc">github</a>.</p>
 		
 		<h1>What I'm doing</h1>
-		<p>I'm working on "FORGET THE BRAKES", a game over at <a href="http://ForgetTheBrak.es/">http:/ForgetTheBrak.es/</a>, you can follow the devlog <a href="http://forums.tigsource.com/index.php?topic=43503.0">here!</a></a>.</p>
+		<p>I'm working on a upcoming game at <a href="http://rollingterror.com">http://rollingterror.com</a>.</p>
 
 		<h1>Contact</h1>
 		<p>You can find me at <a href="https://twitter.com/fonserbc">fonserbc</a>.</p>
-		<p>Or <a href="mailto:fonserbc@gmail.com">email me</a>.</p>
+		<p>Or <a title="Click to send email"
+ href="#" onmouseover="this.href='mailto:'+wantToSendMail();">email me</a>.</p>
 	</div>
 
 <script>
