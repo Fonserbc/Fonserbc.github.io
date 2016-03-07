@@ -125,6 +125,7 @@ AnimatedHeader.prototype.canvasToWorldSpace = function(x, y) {
 
 AnimatedHeader.prototype.handleMouseDown = function(event) {		
 	this.mouseDown = true;
+	window.open('https://fonserbc.itch.io','_blank');
 }
 
 AnimatedHeader.prototype.handleMouseUp = function(event) {
