@@ -6,6 +6,8 @@ $(function() {
     
     var stageNames = ["about", "music", "videos", "events", "contact"];
     var stageMap = {};
+    var contentView = $("#content-div");
+    
     for (let i = 0; i < stageNames.length; ++i) {
         let name = stageNames[i];
         
@@ -44,6 +46,9 @@ $(function() {
                 button.removeClass("active");
             }
 		}
+        
+        contentView.removeClass(window.stage+"-bg");
+        contentView.addClass(stage+"-bg");
         
         // pause youtube videos
         /*stageMap["videos"].content.find("iframe").each(function () {

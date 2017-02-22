@@ -68,6 +68,9 @@ body {
 
 .masthead {
   margin-bottom: 2rem;
+    position:absolute;
+    left: 0;
+    
 }
 
 .masthead-brand {
