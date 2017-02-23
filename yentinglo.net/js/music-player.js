@@ -12,7 +12,7 @@ $(function () {
     var playlists = {
         "songwriting" : [
             {
-                "name": "Absinthe  (Theme song of movie 'Double Date')",
+                "name": "Absinthe  (Theme of movie 'Double Date')",
                 "length": "00:57",
                 "file": "songwriting/Absinthe"
             },
