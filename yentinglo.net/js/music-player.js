@@ -153,7 +153,7 @@ $(function () {
                     let newElement = listElement.clone();
                     newElement.find(".plNum").text((i+1)+".");
                     newElement.find(".plTitle").text(playlists[name][i]["name"]);
-                    newElement.find(".plLength").text(playlists[name][i]["length"]);
+                    //newElement.find(".plLength").text(playlists[name][i]["length"]);
                     newElement.removeClass("hidden");
                     list.append(newElement);
                 }
