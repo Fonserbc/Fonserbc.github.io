@@ -179,9 +179,12 @@ body {
   color: rgba(255,255,255,.5);
     bottom: 0;
     width: 100%;
+    min-height: 70px;
     left: 0;
     height: 7vh;
     background-color: var(--darker);
+    align-content: right;
+    align-items: right;
 }
 
 h1 {
@@ -333,3 +336,34 @@ h1 {
 .placeholder-color:-moz-placeholder { color: var(--darker); }
 .placeholder-color::-moz-placeholder { color: var(--darker); }
 .placeholder-color:-ms-input-placeholder { color: var(--darker); }
+
+#facebook {
+    background-image: url("img/fb.png");
+}
+
+#youtube {
+    background-image: url("img/yt.png");
+}
+
+#soundcloud {
+    background-image: url("img/soundcloud.png");
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.social-row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-left: 1rem;
+    min-height: 50px;
+}
