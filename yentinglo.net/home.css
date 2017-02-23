@@ -238,6 +238,9 @@ h2 {
     .videos-bg {
         background-size: cover;
     }
+    .events-bg {
+        background-attachment: fixed;
+    }
 }
 
 @media(min-width: 768px) {
@@ -298,7 +301,6 @@ h2 {
     background-image: url("img/events.jpg");
     background-size: cover;
     background-position: middle;
-    background-attachment: fixed;
 }
 
 .contact-bg {
