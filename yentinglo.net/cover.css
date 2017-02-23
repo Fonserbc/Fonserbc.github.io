@@ -17,6 +17,11 @@
 }
 
 @font-face {
+    font-family: benchnine-bold;
+    src: url(fonts/BenchNine-Bold.ttf);
+}
+
+@font-face {
     font-family: wireone;
     src: url(fonts/WireOne.ttf);
 }
@@ -132,7 +137,8 @@ body {
     width: 100%;
     min-height: 100%;
     height: 100%;
-    text-align-last:left
+    text-align-last:left;
+        text-align:center;
 }
 
 
@@ -193,12 +199,18 @@ h1 {
         overflow-y: visible;
         height: 100%;
     }
-    .content-inner{
+    #about-content {
         padding-left: 10vw;
         padding-top: 10vh;
     }
     .cover-container{
         min-height: auto;
+    }
+    #contact-content {
+        padding-left: 15vw;
+        padding-right: 15vw;
+        padding-top: 30vh;
+        padding-bottom: 15vh;
     }
 }
 @media(min-width: 768px){ /* Big */
@@ -210,10 +222,16 @@ h1 {
         overflow-y: scroll;
         height: 100vh;
     }
-    .content-inner {
+    #about-content {
         padding-left: 22vw;
         padding-right: 7vw;
         padding-top: 20%;
+    }
+    #contact-content {
+        padding-left: 16vw;
+        padding-right: 16vw;
+        padding-top: 37vh;
+        padding-bottom: 30vh;
     }
     .cover-container{
         min-height: 100vh;
@@ -232,7 +250,7 @@ h1 {
     background-position: right;
 }
 .videos-bg {
-    background-image: url("img/video.jpg");
+    background-image: url("img/videos.jpg");
     background-size: 108vw;
     background-position: right;
 }
@@ -267,3 +285,51 @@ h1 {
   padding-right: 2rem;
     padding-bottom: 2rem;
 }
+
+#contact-inner {
+    font-family: benchnine-bold;
+    font-size: 32px;
+    color: var(--darker);
+}
+
+#contact-inner input {
+    background-color: var(--lighter);
+    min-height: 4rem;
+    border: 0;
+    padding:0.5rem;
+    padding-left: 1rem;
+}
+
+
+#contact-inner textarea {
+    margin-bottom: 3rem;
+    background-color: var(--lighter);
+    border: 0;
+    min-height: 20rem;
+}
+
+#contact-inner button {
+    text-align: center;
+    min-width: 8rem;
+    border: 0;
+    min-height: 4rem;
+    height: 5.5rem;
+    background-color: var(--darker);
+    color: var(--lighter);
+}
+#contact-inner button p{
+    text-align-last: center;
+    margin: auto;
+    display: block;
+}
+
+#contact-inner button:hover,
+#contact-inner button:focus{
+    color: var(--darker);
+    background-color: var(--lighter);
+}
+
+.placeholder-color::-webkit-input-placeholder { color: var(--darker); }
+.placeholder-color:-moz-placeholder { color: var(--darker); }
+.placeholder-color::-moz-placeholder { color: var(--darker); }
+.placeholder-color:-ms-input-placeholder { color: var(--darker); }

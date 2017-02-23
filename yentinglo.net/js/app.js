@@ -62,4 +62,11 @@ $(function() {
     
     
     window.setStage("about");
+    
+    // Preload bg images
+    var bgImages = [];
+    for (let i = 0; i < stageNames.length; ++i) {
+        bgImages.push(new Image());
+        bgImages[i].src = "img/"+stageNames[i]+".jpg";
+    }
 });
