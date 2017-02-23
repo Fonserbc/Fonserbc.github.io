@@ -27,6 +27,11 @@
     src: url(fonts/WireOne.ttf);
 }
 
+@font-face {
+    font-family: badscript;
+    src: url(fonts/BadScript-Regular.ttf);
+}
+
 
 /*
  * Globals
@@ -35,6 +40,7 @@
 :root {
     --darker: rgb(62, 117, 130);
     --lighter: rgb(199, 229, 237);
+    --transparent: rgba(255,255,255,128);
 }
 
 
@@ -185,6 +191,23 @@ h1 {
     margin-top: 8vh;
 }
 
+h2 {
+    font-family: badscript;
+    font-size: 48px;
+    margin-top: 4vh;
+    margin-left: 1rem;
+    width: inherit;
+}
+
+.list-info {
+    margin: 1.5rem 0 1.5rem 1rem;
+    padding-right: 2rem;
+    text-align: justify;
+    font-size: 22px;
+    color: var(--darker);
+    text-shadow: 0 .05rem .1rem var(--lighter);
+}
+
 @media(max-width: 768px) {
     /* Small */
     body {
@@ -210,6 +233,13 @@ h1 {
         padding-right: 15vw;
         padding-top: 30vh;
         padding-bottom: 15vh;
+    }
+    .about-bg {
+        background-size: cover;
+        background-position: right;
+    }
+    .videos-bg {
+        background-size: cover;
     }
 }
 
@@ -240,31 +270,38 @@ h1 {
     .cover-container {
         min-height: 100vh;
     }
+    .about-bg {
+        background-size: 110vw;
+        background-position: right 0vh;
+    }
+    .videos-bg {
+        background-size: 108vw;
+    }
 }
 
 .about-bg {
     background-image: url("img/about.jpg");
-    background-size: 110vw;
-    background-position: right 0vh;
-    background-repeat: space;
+    background-attachment: fixed;
 }
 
 .music-bg {
     background-image: url("img/music.jpg");
     background-size: cover;
     background-position: right;
+    background-attachment: fixed;
 }
 
 .videos-bg {
     background-image: url("img/videos.jpg");
-    background-size: 108vw;
     background-position: right;
+    background-attachment: fixed;
 }
 
 .events-bg {
     background-image: url("img/events.jpg");
     background-size: cover;
     background-position: middle;
+    background-attachment: fixed;
 }
 
 .contact-bg {
@@ -293,6 +330,7 @@ h1 {
     padding-bottom: 2rem;
     -webkit-box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
+    text-shadow: 0 .05rem .1rem var(--lighter);
 }
 
 #contact-inner {
@@ -383,4 +421,29 @@ h1 {
     margin-right: 0px;
     margin-left: 1rem;
     min-height: 50px;
+}
+#videos-content {
+    display: block;
+    margin-top: 6rem;
+    align-content: center;
+    position: relative;
+    text-align: center;
+    text-align-last: center;
+}
+
+#videos-content iframe {
+    margin-bottom: 4rem;
+    display: inline-block;
+    float: center;
+    width: 704px;
+    height: 396px;
+}
+
+#videos-content div {
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+    text-align-last: center;
+    float: center;
+    width: 100%;
 }

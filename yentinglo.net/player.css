@@ -1,0 +1,90 @@
+/* Desktop
+================================================== */
+
+@media(max-width: 768px) {
+    /* Small */
+    .container { position:relative; width:70vw;}
+    audio { outline:none; width:70vw; margin:0 15px 0 14px; margin-left: 0px}
+}
+
+@media(min-width: 768px) {
+    /* Big */
+    .container { position:relative; margin:0 auto; width:30vw; }
+    audio { outline:none; min-width: 30vw; margin:0 15px 0 14px; margin-left: 0px;}
+}
+
+.column { width:inherit; }
+
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+
+/* Basic Styles
+================================================== */
+
+.music-player {
+color:#000;
+font-family: benchnine;
+font-weight:300;
+padding:5px 0;
+margin-left: 5vw;
+    margin-top: 5vh;
+}
+
+* {
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-tap-highlight-color:transparent;
+}
+
+
+/* Misc.
+================================================== */
+
+.add-bottom { margin-bottom:20px !important; }
+.left { float:left; }
+.right { float:right; }
+.center { text-align:center; }
+
+
+/* Custom Styles
+================================================== */
+
+/* Highlight Styles */
+::selection { background-color:#262223; color:#444; }
+
+
+/* Audio Player Styles
+================================================== */
+
+/* Default / Desktop / Firefox */
+#mainwrap { box-shadow:0 0 6px 1px rgba(0,0,0,.25); }
+#audiowrap { margin:0 auto; }
+#plwrap { margin:0 auto; }
+#tracks { position:relative; text-align:center;}
+#nowPlay { display:inline; }
+#npTitle { margin:0; padding:21px; padding-bottom:0px; padding-top:1rem; text-align:right; font-size: 32px}
+#npAction { padding:21px; position:relative; }
+#plList { margin:0; }
+#plList li { cursor:pointer; display:block; margin:0; padding:6px 0; margin-left: -40px}
+#plList li:hover { background-color: var(--transparent); }
+.plItem { position:relative; }
+.plTitle { left:50px; overflow:hidden; position:absolute; right:65px; text-overflow:ellipsis; top:0; white-space:nowrap; }
+.plNum { padding-left:21px; width:25px; }
+.plLength { padding-left:21px; position:absolute; right:21px; top:0; }
+.plSel,.plSel:hover { background-color:var(--transparent)!important; cursor:default!important; }
+a[id^="btn"] { color:#C8C7C8; cursor:pointer; display:inline-block; font-size:50px; margin:0; padding: 0px 27px; text-decoration:none;}
+a[id^="btn"]:last-child { margin-left:-4px; }
+a[id^="btn"]:hover,a[id^="btn"]:active { background-color:var(--transparent); }
+a[id^="btn"]::-moz-focus-inner { border:0; padding:0; }
+.plItem div {
+    font-size: 20px;
+}

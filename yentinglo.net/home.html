@@ -11,7 +11,8 @@
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="home.css" rel="stylesheet"> </head>
+    <link href="home.css" rel="stylesheet">
+    <link href="player.css" rel="stylesheet"> </head>
 
 <body>
     <div class="container-fluid">
@@ -40,16 +41,13 @@
                 </div>
                 <div class="footer">
                     <div class="social-row row">
-                        <a id="facebook" href="https://www.facebook.com/SerenaTingLo" class="social-icon col-md-2 col-xs-3" role="button">
-                        </a>
-                        <a id="youtube" href="https://www.youtube.com/watch?v=xBSrWQiqS0E&list=PLjd2GXZgLHfRHSQSQYUdCVU6Cvc0uKymB" class="social-icon col-md-2 col-xs-3" role="button">
-                        </a>
-                        <a id="soundcloud" href="https://soundcloud.com/lo-yenting" class="social-icon col-md-2 col-xs-3" role="button">
-                        </a>
+                        <a id="facebook" href="https://www.facebook.com/SerenaTingLo" class="social-icon col-md-2 col-xs-3" role="button"> </a>
+                        <a id="youtube" href="https://www.youtube.com/watch?v=ytQ2_C4Oifo&index=1&list=PLjd2GXZgLHfRHSQSQYUdCVU6Cvc0uKymB" class="social-icon col-md-2 col-xs-3" role="button"> </a>
+                        <a id="soundcloud" href="https://soundcloud.com/lo-yenting" class="social-icon col-md-2 col-xs-3" role="button"> </a>
                     </div>
                 </div>
             </div>
-            <div id="content-div" class="col-content col-lg-8 col-md-7 col-sm-6 col-xs-12">
+            <div id="content-div" class="col-content col-lg-8 col-md-7 col-sm-6 col-xs-12 about-bg">
                 <div id="about-content" class="content-inner">
                     <p>YenTing started learning classical piano and classical flute at a young age, when she also sang in city chior and played in school orchestra throughout her childhood.</p>
                     <p>Inspired by Joss Stone and Aretha Franklin, she learned to sing pop soul music while playing piano by herself, and won some singing competitions. She stepped into the world of jazz after she attended the International Taipei International Summer Jazz Academy, and was selected as outstanding student to perform in Tokyo Senzoku music. Later on she founded the jazz club in NCKU in 2011, and became more and more active in all the jazz stages in Taiwan.</p>
@@ -57,14 +55,69 @@
                     <p>She's currently studying Jazz vocal and jazz flute in Conservertarium van Amsterdam.</p>
                 </div>
                 <div id="music-content" class="content-inner hidden">
-                    <h1 class="cover-heading">Music content</h1>
-                    <p class="lead">Music</p>
+                    <div id="duo" class="container music-player">
+                        <h2>Duo</h2>
+                        <div class="list-info column">Test all the jazz stages in Taiwan. During her exchanging year(2013-2014) i Jazz Festival, Jazz Festival</div>
+                        <div class="column">
+                            <div id="mainwrap">
+                                <div id="nowPlay"> <span class="left" id="npAction">Paused...</span> <span class="right" id="npTitle"></span> </div>
+                                <div id="audiowrap">
+                                    <div id="audio0">
+                                        <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+                                    </div>
+                                    <div id="tracks"> <a id="btnPrev">&laquo;</a> <a id="btnNext">&raquo;</a> </div>
+                                </div>
+                                <div id="plwrap">
+                                    <li id="listElement" class="hidden">
+                                        <div class="plItem">
+                                            <div class="plNum">00.</div>
+                                            <div class="plTitle">Song title</div>
+                                            <div class="plLength">0:00</div>
+                                        </div>
+                                    </li>
+                                    <ul id="plList">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tetrapod"  class="container music-player">
+                        <h2>Tetrapod</h2>
+                        <div class="list-info">Test</div>
+                        <div class="column">
+                            <div id="mainwrap">
+                                <div id="nowPlay"> <span class="left" id="npAction">Paused...</span> <span class="right" id="npTitle"></span> </div>
+                                <div id="audiowrap">
+                                    <div id="audio0">
+                                        <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+                                    </div>
+                                    <div id="tracks"> <a id="btnPrev">&laquo;</a> <a id="btnNext">&raquo;</a> </div>
+                                </div>
+                                <div id="plwrap">
+                                    <li id="listElement" class="hidden">
+                                        <div class="plItem">
+                                            <div class="plNum">00.</div>
+                                            <div class="plTitle">Song title</div>
+                                            <div class="plLength">0:00</div>
+                                        </div>
+                                    </li>
+                                    <ul id="plList">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="videos-content" class="content-inner hidden">
-                    <h1 class="cover-heading">Videos content</h1>
-                    <p class="lead">Videos</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xBSrWQiqS0E" frameborder="0" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ytQ2_C4Oifo" frameborder="0" allowfullscreen></iframe>
+                <div id="videos-content" class="content-inner hidden row">
+                    <div>
+                    <iframe src="https://www.youtube.com/embed/xBSrWQiqS0E" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div><iframe src="https://www.youtube.com/embed/ytQ2_C4Oifo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div><iframe src="https://www.youtube.com/embed/ytQ2_C4Oifo" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div id="events-content" class="content-inner hidden">
                     <h1 class="cover-heading">Events content</h1>
@@ -99,6 +152,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/music-player.js"></script>
 </body>
 
 </html>
