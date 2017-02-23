@@ -41,7 +41,6 @@ html {
 }
 body {
   background-image: url(img/title.jpg);
-    background-position: -30vw;
     background-repeat: no-repeat;
     background-size: cover;
   min-height: 100%;
@@ -53,10 +52,6 @@ body {
   vertical-align: middle;
     
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
-}
-
-.title-content {
-    margin-left:65%;
 }
 
 .vertical {
@@ -97,4 +92,24 @@ body {
 .title-text {
     font-family: londrina;
     font-size: 34px;
+}
+
+@media(max-width: 768px) {
+    /* Small */
+    .title-content {
+        margin-left: 25%;
+    }
+    body {
+        background-position: center;
+    }
+}
+
+@media(min-width: 768px) {
+    /* Big */
+    .title-content {
+        margin-left:65%;
+    }
+    body {
+        background-position: -30vw;
+    }
 }
