@@ -39,14 +39,24 @@ $(function () {
         ],
         "tetrapod" : [
             {
-                "name": "Alone Together",
-                "length": "00:57",
-                "file": "duo/Alone Together"
+                "name": "Cicada and Banyan Tree",
+                "length": "00:34",
+                "file": "tetrapod/Cicada and Banyan Tree"
             },
             {
-                "name": "Easy living",
+                "name": "Copy Machine",
+                "length": "00:32",
+                "file": "tetrapod/Copy Machine"
+            },
+            {
+                "name": "Elephants Remember",
                 "length": "00:30",
-                "file": "duo/Easy living"
+                "file": "tetrapod/Elephants remember"
+            },
+            {
+                "name": "Garlic Skin",
+                "length": "00:34",
+                "file": "tetrapod/Garlic Skin"
             }
         ]
     };

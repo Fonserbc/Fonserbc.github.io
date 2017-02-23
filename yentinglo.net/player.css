@@ -37,7 +37,14 @@ font-family: benchnine;
 font-weight:300;
 padding:5px 0;
 margin-left: 5vw;
-    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-top: 0;
+}
+
+.music-player h2 {
+    margin-top: 1vh;
+    margin-left: 1rem;
+    width: inherit;
 }
 
 * {

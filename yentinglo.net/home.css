@@ -194,9 +194,6 @@ h1 {
 h2 {
     font-family: badscript;
     font-size: 48px;
-    margin-top: 4vh;
-    margin-left: 1rem;
-    width: inherit;
 }
 
 .list-info {
@@ -446,4 +443,50 @@ h2 {
     text-align-last: center;
     float: center;
     width: 100%;
+}
+
+#music-content {
+    margin-top: 10vh;
+}
+
+.events-what {
+    font-family: badscript;
+    font-size: 42px;
+    text-align-last: right;
+    margin-top: 8px;
+}
+
+.events-when {
+    font-family: benchnine;
+    font-size: 44px;
+    color: var(--lighter);
+    text-align-last: left;
+}
+
+.events-where {
+    font-family: benchnine;
+    font-size: 44px;
+    color: var(--lighter);
+    text-align-last: left;
+}
+
+.line {
+    min-height: 2px;
+    width: 100%;
+    background-color: var(--lighter);
+    margin-top: -10px;
+}
+
+.events-container{
+    margin-top: 10vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    position: relative;
+    align-content: center;
+    text-align: center;
+    text-align-last: center;
+}
+
+.event {
+    margin-bottom: 30px;
 }
