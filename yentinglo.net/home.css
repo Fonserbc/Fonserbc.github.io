@@ -163,7 +163,7 @@ body {
  * Footer
  */
 
-.mastfoot {
+.footer {
     position: absolute;
     color: rgba(255, 255, 255, .5);
     bottom: 0;
@@ -284,7 +284,7 @@ h1 {
     align-items: center;
 }
 
-.masthead {
+.header {
     margin-left: -16px;
     margin-right: -16px;
     background-color: var(--darker);
