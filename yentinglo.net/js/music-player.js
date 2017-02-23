@@ -8,8 +8,60 @@ $(function () {
     b.setAttribute('data-useragent', navigator.userAgent);
     b.setAttribute('data-platform', navigator.platform);
     
-    var playlistNames = ["duo", "tetrapod"];
+    var playlistNames = ["songwriting", "duo", "tetrapod", "band"];
     var playlists = {
+        "songwriting" : [
+            {
+                "name": "Absinthe  (Theme song of movie 'Double Date')",
+                "length": "00:57",
+                "file": "songwriting/Absinthe"
+            },
+            {
+                "name": "The 5 Min In Between",
+                "length": "00:57",
+                "file": "songwriting/5min"
+            },
+            {
+                "name": "Beer and Gossip",
+                "length": "00:57",
+                "file": "songwriting/Beer and Gossip"
+            },
+            {
+                "name": "I Fall Asleep Too Easily",
+                "length": "00:57",
+                "file": "songwriting/Fall Asleep"
+            },
+            {
+                "name": "雨樹澄黃",
+                "length": "00:57",
+                "file": "songwriting/Golden shower tree"
+            },
+            {
+                "name": "畢業序曲",
+                "length": "00:57",
+                "file": "songwriting/Graduation overture"
+            },
+            {
+                "name": "Leaving",
+                "length": "00:57",
+                "file": "songwriting/leaving"
+            },
+            {
+                "name": "Street Carol",
+                "length": "00:57",
+                "file": "songwriting/Street Carol"
+            },
+            {
+                "name": "Sweetest Single Valentine",
+                "length": "00:57",
+                "file": "songwriting/Sweetest single valentine"
+            },
+            {
+                "name": "Tromsø Sky",
+                "length": "00:57",
+                "file": "songwriting/Tromso Sky"
+            }
+        ],
         "duo" : [
             {
                 "name": "Alone Together",
@@ -26,15 +78,45 @@ $(function () {
                 "length": "00:40",
                 "file": "duo/Everytime we say goodbye"
             },
+             {
+                "name": "Speak Low",
+                "length": "00:57",
+                "file": "duo/Speak low"
+            },
             {
                 "name": "God bless the child",
                 "length": "00:57",
                 "file": "duo/God bless the child"
             },
             {
-                "name": "Love for sale",
+                "name": "Darn That Dream",
                 "length": "00:57",
-                "file": "duo/Love for sale"
+                "file": "duo/Darn That dream"
+            },
+            {
+                "name": "Falsa Baiana",
+                "length": "00:30",
+                "file": "duo/Falsa Baiana1"
+            },
+            {
+                "name": "Joy Spring",
+                "length": "00:40",
+                "file": "duo/Joy Spring"
+            },
+            {
+                "name": "Skylark",
+                "length": "00:57",
+                "file": "duo/Skylark"
+            },
+            {
+                "name": "The Song Is You",
+                "length": "00:57",
+                "file": "duo/The Song Is You"
+            },
+            {
+                "name": "Love For Sale",
+                "length": "00:57",
+                "file": "duo/Love for sale_1"
             }
         ],
         "tetrapod" : [
@@ -57,6 +139,48 @@ $(function () {
                 "name": "Garlic Skin",
                 "length": "00:34",
                 "file": "tetrapod/Garlic Skin"
+            }
+        ],
+        "band" : [
+            {
+                "name": "Cry Me a River",
+                "length": "00:34",
+                "file": "band/Cry me a River"
+            },
+            {
+                "name": "Hi Fly",
+                "length": "00:32",
+                "file": "band/Hi Fly"
+            },
+            {
+                "name": "I'll Remember April",
+                "length": "00:30",
+                "file": "band/I'll remember april"
+            },
+            {
+                "name": "I've Got You Under My Skin ft. KoSwing Big Band",
+                "length": "00:34",
+                "file": "tetrapod/I've got you under my skin"
+            },
+            {
+                "name": "On A Clear Day",
+                "length": "00:34",
+                "file": "band/On a Clear Day"
+            },
+            {
+                "name": "Se Todos Fossem Iguais A Você",
+                "length": "00:32",
+                "file": "band/Se Todos Voce"
+            },
+            {
+                "name": "On The Sunny Side Of The Street ft. KoSwing Big Band",
+                "length": "00:30",
+                "file": "band/Sunnyside of the Street"
+            },
+            {
+                "name": "The Boy Next Door",
+                "length": "00:34",
+                "file": "tetrapod/The Boy Next Door"
             }
         ]
     };

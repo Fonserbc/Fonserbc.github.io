@@ -189,20 +189,22 @@ h1 {
     font-family: fredericka;
     font-size: 64px;
     margin-top: 8vh;
+    color: var(--darker);
 }
 
 h2 {
     font-family: badscript;
-    font-size: 48px;
+    font-size: 40px;
+    text-align: left;
 }
 
 .list-info {
-    margin: 1.5rem 0 1.5rem 1rem;
+    margin: 1rem 0 0rem 0rem;
     padding-right: 2rem;
     text-align: justify;
     font-size: 22px;
     color: var(--darker);
-    text-shadow: 0 .05rem .1rem var(--lighter);
+    text-shadow: 0 .05rem .1rem var(--darker);
 }
 
 @media(max-width: 768px) {
@@ -221,6 +223,7 @@ h2 {
     #about-content {
         padding-left: 10vw;
         padding-top: 10vh;
+        padding-bottom: 10vh;
     }
     .cover-container {
         min-height: auto;
@@ -393,15 +396,22 @@ h2 {
 
 #facebook {
     background-image: url("img/fb.png");
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#soundcloud {
+    background-image: url("img/soundcloud.png");
 }
 
 #youtube {
     background-image: url("img/yt.png");
 }
 
-#soundcloud {
-    background-image: url("img/soundcloud.png");
-}
 
 .social-icon {
     width: 50px;
