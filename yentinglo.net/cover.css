@@ -16,13 +16,18 @@
     src: url(fonts/BenchNine-Light.ttf);
 }
 
+@font-face {
+    font-family: wireone;
+    src: url(fonts/WireOne.ttf);
+}
+
 /*
  * Globals
  */
 
 :root{
-    --darker: rgb(15, 122, 122);
-    --lighter: rgb(215, 250, 250);
+    --darker: rgb(62, 117, 130);
+    --lighter: rgb(199, 229, 237);
 }
 
 /* Links */
@@ -37,6 +42,14 @@ a:hover {
     color: black;
     font-size: 24px;
     text-align-last: left;
+    text-align: justify;
+}
+
+#menu-bar p{
+    font-family: wireone;
+    color: var(--darker);
+    font-size: 36px;
+    text-align-last: center;
     text-align: justify;
 }
 
@@ -131,24 +144,24 @@ body {
 .nav-link {
   color: rgba(255,255,255,.7);
   background-color: transparent;
-  /*border-bottom: .25rem solid transparent;*/
+  border-bottom: .1rem solid transparent;
   font-family: londrina;
     font-size: 32px;
     text-align: center;
-  min-width: 9rem;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   border-bottom-color: rgba(255,255,255,1);
     color: rgba(255,255,255,1);
+    text-decoration: none;
 }
 
 .active {
   color: #fff;
   border-bottom-color: #fff;
-  text-decoration: underline;
-    text-decoration-color: white;
+  /*text-decoration: underline;*/
+  text-decoration-color: white;
 }
 
 /*
@@ -166,7 +179,9 @@ body {
 }
 
 h1 {
-      font-family: fredericka
+      font-family: fredericka;
+      font-size: 64px;
+    margin-top: 8vh;
 }
 
 @media(max-width: 768px){ /* Small */
@@ -218,13 +233,13 @@ h1 {
 }
 .videos-bg {
     background-image: url("img/video.jpg");
-    background-size:cover;
+    background-size: 108vw;
     background-position: right;
 }
 .events-bg {
     background-image: url("img/events.jpg");
     background-size:cover;
-    background-position: right;
+    background-position: middle;
 }
 .contact-bg {
     background-image: url("img/contact.JPG");
@@ -232,17 +247,23 @@ h1 {
     background-position: center;
 }
 
-.full-height {
-    min-height: 80vh;
+.menu-content {
+    min-height: 60%;
     padding: 2rem;
+    min-height: 60vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: -5vh;
+    display: flex;
+    align-items: center;
 }
 
 .masthead {
     margin-left: -16px;
     margin-right: -16px;
     background-color: var(--darker);
-}
-
-#about p {
-    color: white;
+    
+  padding-top: 2rem;
+  padding-right: 2rem;
+    padding-bottom: 2rem;
 }
