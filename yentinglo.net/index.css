@@ -17,16 +17,19 @@ a,
 a:focus,
 a:hover {
   color: #fff;
+  text-decoration: none;
 }
 
+h1 {
+    padding-bottom: 1rem;
+    border-bottom: .1rem solid transparent;
+    font-family: fredericka;
+    font-size: 54px;
+}
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
+h1:hover,
+h1:focus {
+    border-bottom-color: white;
 }
 
 
@@ -66,7 +69,6 @@ body {
 
 .title-content:focus,
 .title-content:hover {
-    text-decoration: underline;
     cursor: pointer;
 }
 
@@ -90,11 +92,6 @@ body {
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: bold;
-}
-
-h1 {
-  font-family: fredericka;
-    font-size: 54px;
 }
 
 .title-text {
