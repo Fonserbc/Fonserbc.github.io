@@ -64,7 +64,7 @@ a:hover {
     font-family: wireone;
     color: var(--darker);
     font-size: 36px;
-    text-align-last: center;
+    text-align-last: left;
     text-align: justify;
 }
 
@@ -317,8 +317,8 @@ h2 {
     min-height: 60%;
     padding: 2rem;
     min-height: 60vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 5vh;
+    margin-right: 5vh;
     margin-top: -5vh;
     display: flex;
     align-items: center;
