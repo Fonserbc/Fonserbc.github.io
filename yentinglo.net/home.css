@@ -148,6 +148,7 @@ body {
     font-family: londrina;
     font-size: 32px;
     text-align: center;
+    margin:1rem;
 }
 
 .nav-link:hover,
@@ -327,9 +328,7 @@ h2 {
     margin-left: -16px;
     margin-right: -16px;
     background-color: var(--darker);
-    padding-top: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
     -webkit-box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
     text-shadow: 0 .05rem .1rem var(--lighter);
