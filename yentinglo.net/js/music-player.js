@@ -17,19 +17,14 @@ $(function () {
                 "file": "songwriting/Absinthe"
             },
             {
-                "name": "The 5 Min In Between",
-                "length": "00:57",
-                "file": "songwriting/5min"
-            },
-            {
-                "name": "Beer and Gossip",
-                "length": "00:57",
-                "file": "songwriting/Beer and Gossip"
-            },
-            {
                 "name": "I Fall Asleep Too Easily",
                 "length": "00:57",
                 "file": "songwriting/Fall Asleep"
+            },
+            {
+                "name": "The 5 Min In Between",
+                "length": "00:57",
+                "file": "songwriting/5min"
             },
             {
                 "name": "雨樹澄黃",
@@ -37,14 +32,9 @@ $(function () {
                 "file": "songwriting/Golden shower tree"
             },
             {
-                "name": "畢業序曲",
+                "name": "Beer and Gossip",
                 "length": "00:57",
-                "file": "songwriting/Graduation overture"
-            },
-            {
-                "name": "Leaving",
-                "length": "00:57",
-                "file": "songwriting/leaving"
+                "file": "songwriting/Beer and Gossip"
             },
             {
                 "name": "Street Carol",
@@ -52,14 +42,24 @@ $(function () {
                 "file": "songwriting/Street Carol"
             },
             {
+                "name": "畢業序曲",
+                "length": "00:57",
+                "file": "songwriting/Graduation overture"
+            },
+            {
                 "name": "Sweetest Single Valentine",
                 "length": "00:57",
                 "file": "songwriting/Sweetest single valentine"
             },
             {
-                "name": "Tromsø Sky",
+                "name": "Tromsø Sky (ft. CvA Jazz Choir)",
                 "length": "00:57",
                 "file": "songwriting/Tromso Sky"
+            },
+            {
+                "name": "Leaving",
+                "length": "00:57",
+                "file": "songwriting/leaving"
             }
         ],
         "duo" : [
@@ -121,14 +121,14 @@ $(function () {
         ],
         "tetrapod" : [
             {
-                "name": "Cicada and Banyan Tree",
-                "length": "00:34",
-                "file": "tetrapod/Cicada and Banyan Tree"
-            },
-            {
                 "name": "Copy Machine",
                 "length": "00:32",
                 "file": "tetrapod/Copy Machine"
+            },
+            {
+                "name": "Garlic Skin",
+                "length": "00:34",
+                "file": "tetrapod/Garlic Skin"
             },
             {
                 "name": "Elephants Remember",
@@ -136,9 +136,9 @@ $(function () {
                 "file": "tetrapod/Elephants remember"
             },
             {
-                "name": "Garlic Skin",
+                "name": "Cicada and Banyan Tree",
                 "length": "00:34",
-                "file": "tetrapod/Garlic Skin"
+                "file": "tetrapod/Cicada and Banyan Tree"
             }
         ],
         "band" : [
@@ -181,6 +181,11 @@ $(function () {
                 "name": "The Boy Next Door",
                 "length": "00:34",
                 "file": "tetrapod/The Boy Next Door"
+            },
+            {
+                "name": "Night And Day ft. Taipei Riot Big Band",
+                "length": "00:30",
+                "file": "band/Night and Day"
             }
         ]
     };
