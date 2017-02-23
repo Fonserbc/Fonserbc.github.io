@@ -1,6 +1,7 @@
 /*
  * Fonts
  */
+
 @font-face {
     font-family: fredericka;
     src: url(fonts/FrederickatheGreat-Regular.ttf);
@@ -26,23 +27,26 @@
     src: url(fonts/WireOne.ttf);
 }
 
+
 /*
  * Globals
  */
 
-:root{
+:root {
     --darker: rgb(62, 117, 130);
     --lighter: rgb(199, 229, 237);
 }
 
+
 /* Links */
+
 a,
 a:focus,
 a:hover {
-  color: #fff;
+    color: #fff;
 }
 
-#about-content p{
+#about-content p {
     font-family: benchnine;
     color: black;
     font-size: 24px;
@@ -50,7 +54,7 @@ a:hover {
     text-align: justify;
 }
 
-#menu-bar p{
+#menu-bar p {
     font-family: wireone;
     color: var(--darker);
     font-size: 36px;
@@ -58,14 +62,17 @@ a:hover {
     text-align: justify;
 }
 
+
 /* Custom default button */
+
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: .05rem solid #fff;
 }
 
 
@@ -75,57 +82,39 @@ a:hover {
 
 html,
 body {
-  height: 100%;
-  background-color: #333;
-  margin: 0;
-  overflow-x: hidden;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+    height: 100%;
+    background-color: #333;
+    margin: 0;
+    overflow-x: hidden;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
+
 .col-content {
     background-color: #111;
     overflow-y: scroll;
 }
 
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
+
 .cover-container {
     background-color: var(--lighter);
 }
 
-.title-wrapper {
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-}
-.title-container {
-    vertical-align: middle;
-}
 
 /* Padding for spacing */
+
 .inner {
-  padding: 2rem;
+    padding: 2rem;
 }
 
-
 .vertical {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    /* These two lines are counted as one :-)       */
     display: flex;
     align-items: center;
 }
@@ -137,8 +126,8 @@ body {
     width: 100%;
     min-height: 100%;
     height: 100%;
-    text-align-last:left;
-        text-align:center;
+    text-align-last: left;
+    text-align: center;
 }
 
 
@@ -146,29 +135,29 @@ body {
  * Header
  */
 
-
 .nav-link {
-  color: rgba(255,255,255,.7);
-  background-color: transparent;
-  border-bottom: .1rem solid transparent;
-  font-family: londrina;
+    color: rgba(255, 255, 255, .7);
+    background-color: transparent;
+    border-bottom: .1rem solid transparent;
+    font-family: londrina;
     font-size: 32px;
     text-align: center;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,1);
-    color: rgba(255,255,255,1);
+    border-bottom-color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
 
 .active {
-  color: #fff;
-  border-bottom-color: #fff;
-  /*text-decoration: underline;*/
-  text-decoration-color: white;
+    color: #fff;
+    border-bottom-color: #fff;
+    /*text-decoration: underline;*/
+    text-decoration-color: white;
 }
+
 
 /*
  * Footer
@@ -176,7 +165,7 @@ body {
 
 .mastfoot {
     position: absolute;
-  color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     bottom: 0;
     width: 100%;
     min-height: 70px;
@@ -185,15 +174,19 @@ body {
     background-color: var(--darker);
     align-content: right;
     align-items: right;
+    
+    -webkit-box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5), 0 -5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5), 0 -5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-      font-family: fredericka;
-      font-size: 64px;
+    font-family: fredericka;
+    font-size: 64px;
     margin-top: 8vh;
 }
 
-@media(max-width: 768px){ /* Small */
+@media(max-width: 768px) {
+    /* Small */
     body {
         overflow-y: scroll;
     }
@@ -201,12 +194,15 @@ h1 {
         background-color: #111;
         overflow-y: visible;
         height: 100%;
+        
+        -webkit-box-shadow: inset 0 5rem 5rem -5rem rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0 5px 1.5rem -.1rem rgba(0, 0, 0, 0.5);
     }
     #about-content {
         padding-left: 10vw;
         padding-top: 10vh;
     }
-    .cover-container{
+    .cover-container {
         min-height: auto;
     }
     #contact-content {
@@ -216,7 +212,9 @@ h1 {
         padding-bottom: 15vh;
     }
 }
-@media(min-width: 768px){ /* Big */
+
+@media(min-width: 768px) {
+    /* Big */
     body {
         overflow-y: hidden;
     }
@@ -224,6 +222,9 @@ h1 {
         background-color: #111;
         overflow-y: scroll;
         height: 100vh;
+        
+        -webkit-box-shadow: inset 5rem 0 5rem -5rem rgba(0, 0, 0, 0.5);
+        box-shadow: inset 5rem 0 5rem -5rem rgba(0, 0, 0, 0.5);
     }
     #about-content {
         padding-left: 22vw;
@@ -236,7 +237,7 @@ h1 {
         padding-top: 37vh;
         padding-bottom: 30vh;
     }
-    .cover-container{
+    .cover-container {
         min-height: 100vh;
     }
 }
@@ -247,24 +248,28 @@ h1 {
     background-position: right 0vh;
     background-repeat: space;
 }
+
 .music-bg {
     background-image: url("img/music.jpg");
-    background-size:cover;
+    background-size: cover;
     background-position: right;
 }
+
 .videos-bg {
     background-image: url("img/videos.jpg");
     background-size: 108vw;
     background-position: right;
 }
+
 .events-bg {
     background-image: url("img/events.jpg");
-    background-size:cover;
+    background-size: cover;
     background-position: middle;
 }
+
 .contact-bg {
     background-image: url("img/contact.JPG");
-    background-size:cover;
+    background-size: cover;
     background-position: center;
 }
 
@@ -283,10 +288,11 @@ h1 {
     margin-left: -16px;
     margin-right: -16px;
     background-color: var(--darker);
-    
-  padding-top: 2rem;
-  padding-right: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
     padding-bottom: 2rem;
+    -webkit-box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 1.5rem .1rem rgba(0, 0, 0, 0.5);
 }
 
 #contact-inner {
@@ -299,10 +305,9 @@ h1 {
     background-color: var(--lighter);
     min-height: 4rem;
     border: 0;
-    padding:0.5rem;
+    padding: 0.5rem;
     padding-left: 1rem;
 }
-
 
 #contact-inner textarea {
     margin-bottom: 3rem;
@@ -320,22 +325,34 @@ h1 {
     background-color: var(--darker);
     color: var(--lighter);
 }
-#contact-inner button p{
+
+#contact-inner button p {
     text-align-last: center;
     margin: auto;
     display: block;
 }
 
 #contact-inner button:hover,
-#contact-inner button:focus{
+#contact-inner button:focus {
     color: var(--darker);
     background-color: var(--lighter);
 }
 
-.placeholder-color::-webkit-input-placeholder { color: var(--darker); }
-.placeholder-color:-moz-placeholder { color: var(--darker); }
-.placeholder-color::-moz-placeholder { color: var(--darker); }
-.placeholder-color:-ms-input-placeholder { color: var(--darker); }
+.placeholder-color::-webkit-input-placeholder {
+    color: var(--darker);
+}
+
+.placeholder-color:-moz-placeholder {
+    color: var(--darker);
+}
+
+.placeholder-color::-moz-placeholder {
+    color: var(--darker);
+}
+
+.placeholder-color:-ms-input-placeholder {
+    color: var(--darker);
+}
 
 #facebook {
     background-image: url("img/fb.png");
