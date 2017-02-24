@@ -8,7 +8,7 @@ $(function () {
     b.setAttribute('data-useragent', navigator.userAgent);
     b.setAttribute('data-platform', navigator.platform);
     
-    var playlistNames = ["songwriting", "duo", "tetrapod", "band"];
+    var playlistNames = ["songwriting", "tetrapod", "duo", "band"];
     var playlists = {
         "songwriting" : [
             {
@@ -62,63 +62,6 @@ $(function () {
                 "file": "songwriting/leaving"
             }
         ],
-        "duo" : [
-            {
-                "name": "Alone Together",
-                "length": "00:57",
-                "file": "duo/Alone Together"
-            },
-            {
-                "name": "Easy living",
-                "length": "00:30",
-                "file": "duo/Easy living"
-            },
-            {
-                "name": "Everytime we say goodbye",
-                "length": "00:40",
-                "file": "duo/Everytime we say goodbye"
-            },
-             {
-                "name": "Speak Low",
-                "length": "00:57",
-                "file": "duo/Speak low"
-            },
-            {
-                "name": "God bless the child",
-                "length": "00:57",
-                "file": "duo/God bless the child"
-            },
-            {
-                "name": "Darn That Dream",
-                "length": "00:57",
-                "file": "duo/Darn That dream"
-            },
-            {
-                "name": "Falsa Baiana",
-                "length": "00:30",
-                "file": "duo/Falsa Baiana1"
-            },
-            {
-                "name": "Joy Spring",
-                "length": "00:40",
-                "file": "duo/Joy Spring"
-            },
-            {
-                "name": "Skylark",
-                "length": "00:57",
-                "file": "duo/Skylark"
-            },
-            {
-                "name": "The Song Is You",
-                "length": "00:57",
-                "file": "duo/The Song Is You"
-            },
-            {
-                "name": "Love For Sale",
-                "length": "00:57",
-                "file": "duo/Love for sale_1"
-            }
-        ],
         "tetrapod" : [
             {
                 "name": "Copy Machine",
@@ -141,11 +84,63 @@ $(function () {
                 "file": "tetrapod/Cicada and Banyan Tree"
             }
         ],
+        "duo" : [
+            {
+                "name": "Easy Living",
+                "length": "00:30",
+                "file": "duo/Easy living"
+            },
+            {
+                "name": "The Song Is You",
+                "length": "00:57",
+                "file": "duo/The Song Is You"
+            },
+             {
+                "name": "Speak Low",
+                "length": "00:57",
+                "file": "duo/Speak low"
+            },
+            {
+                "name": "God Bless The Child",
+                "length": "00:57",
+                "file": "duo/God bless the child"
+            },
+            {
+                "name": "Love For Sale",
+                "length": "00:57",
+                "file": "duo/Love for Sale_1"
+            },
+            {
+                "name": "Alone Together",
+                "length": "00:57",
+                "file": "duo/Alone Together"
+            },
+            {
+                "name": "Joy Spring",
+                "length": "00:40",
+                "file": "duo/Joy Spring"
+            },
+            {
+                "name": "Darn That Dream",
+                "length": "00:57",
+                "file": "duo/Darn That dream"
+            },
+            {
+                "name": "Falsa Baiana",
+                "length": "00:30",
+                "file": "duo/Falsa Baiana1"
+            },
+            {
+                "name": "Skylark",
+                "length": "00:57",
+                "file": "duo/Skylark"
+            }            
+        ],
         "band" : [
             {
-                "name": "Cry Me a River",
+                "name": "I've Got You Under My Skin (ft. KoSwing Big Band)",
                 "length": "00:34",
-                "file": "band/Cry me a River"
+                "file": "band/I've got you under my skin"
             },
             {
                 "name": "Hi Fly",
@@ -153,14 +148,14 @@ $(function () {
                 "file": "band/Hi Fly"
             },
             {
-                "name": "I'll Remember April",
-                "length": "00:30",
-                "file": "band/I'll remember april"
+                "name": "The Boy Next Door",
+                "length": "00:34",
+                "file": "band/The Boy Next Door"
             },
             {
-                "name": "I've Got You Under My Skin ft. KoSwing Big Band",
-                "length": "00:34",
-                "file": "tetrapod/I've got you under my skin"
+                "name": "Night And Day (ft. Taipei Riot Big Band)",
+                "length": "00:30",
+                "file": "band/Night and Day"
             },
             {
                 "name": "On A Clear Day",
@@ -168,25 +163,25 @@ $(function () {
                 "file": "band/On a Clear Day"
             },
             {
+                "name": "Cry Me a River",
+                "length": "00:34",
+                "file": "band/Cry me a River"
+            },
+            {
                 "name": "Se Todos Fossem Iguais A Você",
                 "length": "00:32",
                 "file": "band/Se Todos Voce"
             },
             {
-                "name": "On The Sunny Side Of The Street ft. KoSwing Big Band",
+                "name": "On The Sunny Side Of The Street (ft. KoSwing Big Band)",
                 "length": "00:30",
                 "file": "band/Sunnyside of the Street"
             },
             {
-                "name": "The Boy Next Door",
-                "length": "00:34",
-                "file": "tetrapod/The Boy Next Door"
-            },
-            {
-                "name": "Night And Day ft. Taipei Riot Big Band",
+                "name": "I'll Remember April",
                 "length": "00:30",
-                "file": "band/Night and Day"
-            }
+                "file": "band/I'll remember april"
+            } 
         ]
     };
     
