@@ -108,7 +108,7 @@ $(function () {
             {
                 "name": "Love For Sale",
                 "length": "00:57",
-                "file": "duo/Love for Sale_1"
+                "file": "duo/Love For Sale_1"
             },
             {
                 "name": "Alone Together",
