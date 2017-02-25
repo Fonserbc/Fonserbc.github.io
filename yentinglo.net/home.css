@@ -472,18 +472,19 @@ h2 {
 .events-what {
     font-family: badscript;
     text-align-last: right;
+    font-size: 30px;
 }
 
 .events-when {
     font-family: benchnine;
-    font-size: 44px;
+    font-size: 30px;
     color: var(--lighter);
     text-align-last: left;
 }
 
 .events-where {
     font-family: benchnine;
-    font-size: 44px;
+    font-size: 30px;
     color: var(--lighter);
     text-align-last: left;
 }
