@@ -12,6 +12,11 @@ $(function () {
     var playlists = {
         "songwriting" : [
             {
+                "name": "The 5 Min In Between",
+                "length": "00:57",
+                "file": "songwriting/5min"
+            },
+            {
                 "name": "Absinthe  (Theme of movie 'Double Date')",
                 "length": "00:57",
                 "file": "songwriting/Absinthe"
@@ -20,11 +25,6 @@ $(function () {
                 "name": "I Fall Asleep Too Easily",
                 "length": "00:57",
                 "file": "songwriting/Fall Asleep"
-            },
-            {
-                "name": "The 5 Min In Between",
-                "length": "00:57",
-                "file": "songwriting/5min"
             },
             {
                 "name": "雨樹澄黃",
