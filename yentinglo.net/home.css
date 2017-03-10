@@ -186,8 +186,6 @@ body {
 
 h1 {
     font-family: fredericka;
-    font-size: 64px;
-    margin-top: 8vh;
     color: var(--darker);
 }
 
@@ -221,6 +219,7 @@ h2 {
     }
     #about-content {
         padding-left: 10vw;
+        padding-right: 10vw;
         padding-top: 10vh;
         padding-bottom: 10vh;
     }
@@ -244,14 +243,26 @@ h2 {
         background-attachment: fixed;
     }
     .events-what {
-        font-size: 24px;
+        font-size: 32px;
         margin-top: 8px;
     }
     .nav-link {
         font-size: 32px;
     }
     .menu-content {
-        font-size: 35px;
+        font-size: 28px;
+        margin-left: 5vh;
+        margin-right: 5vh;
+        margin-top: 0vh;
+        margin-bottom: 70px;
+    }
+    h1 {
+        font-size: 64px;
+        margin-top: 3vh;
+        margin-bottom: 0vh;
+    }
+    #music-content {
+        margin-left: 3vw;
     }
 }
 
@@ -283,8 +294,8 @@ h2 {
         min-height: 100vh;
     }
     .about-bg {
-        background-size: 110vw;
-        background-position: right 0vh;
+        background-size: cover;
+        background-position: right;
     }
     .videos-bg {
         background-size: 108vw;
@@ -294,17 +305,26 @@ h2 {
         margin-top: 8px;
     }
     .nav-link {
-        font-size: 22px;
+        font-size: 24px;
     }
     .menu-content {
         font-size: 28px;
+        margin-left: 1vh;
+        margin-right: 1vh;
+        margin-top: -1vh;
+        min-height: 60%;
+        min-height: 60vh;
+    }
+    h1 {
+        font-size: 42px;
+        margin-top: 6vh;
     }
 }
 
 @media(min-width: 992px) {
     /* Large */
     .nav-link {
-        font-size: 23px;
+        font-size: 22px;
     }
     
     #about-content {
@@ -314,13 +334,19 @@ h2 {
     }
     .menu-content {
         font-size: 30px;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        margin-top: -2vh;
+    }
+    h1 {
+        font-size: 54px;
     }
 }
 
 @media(min-width: 1200px) {
     /* Extra large */
     .nav-link {
-        font-size: 24px;
+        font-size: 23px;
     }
     #about-content {
         padding-left: 22vw;
@@ -328,12 +354,22 @@ h2 {
         padding-top: 20%;
     }
     .menu-content {
-        font-size: 36px;
+        font-size: 32px;
+        margin-left: 5vh;
+        margin-right: 5vh;
+        margin-top: -5vh;
+    }
+    .about-bg {
+        background-size: 110vw;
+        background-position: right 0vh;
+    }
+    h1 {
+        font-size: 64px;
     }
 }
 
 @media(min-width: 1560px) {
-    /* Extra large */
+    /* Extra Extra large */
     .nav-link {
         font-size: 32px;
     }
@@ -360,7 +396,7 @@ h2 {
 .events-bg {
     background-image: url("img/events.jpg");
     background-size: cover;
-    background-position: middle;
+    background-position: right;
 }
 
 .contact-bg {
@@ -370,12 +406,7 @@ h2 {
 }
 
 .menu-content {
-    min-height: 60%;
     padding: 2rem;
-    min-height: 60vh;
-    margin-left: 5vh;
-    margin-right: 5vh;
-    margin-top: -5vh;
     display: flex;
     align-items: center;
 }
@@ -500,8 +531,8 @@ h2 {
     margin-bottom: 6rem;
     display: inline-block;
     float: center;
-    width: 640px;
-    height: 360px;
+    width: 50vw;
+    height: 28vw;
 }
 
 #videos-content div {

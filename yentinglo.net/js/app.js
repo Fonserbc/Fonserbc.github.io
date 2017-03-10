@@ -58,6 +58,9 @@ $(function() {
         });*/
         
         window.stage = stage;
+        contentView.setTimeout(function() {
+            contentView.scrollTo(0);
+        }, 0);
     }
     
     
