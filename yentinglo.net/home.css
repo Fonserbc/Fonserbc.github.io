@@ -205,7 +205,7 @@ h2 {
 }
 
 @media(max-width: 768px) {
-    /* Small */
+    /* Smaller */
     body {
         overflow-y: scroll;
     }
@@ -218,7 +218,7 @@ h2 {
         box-shadow: inset 0 5px 1.5rem -.1rem rgba(0, 0, 0, 0.5);
     }
     #about-content {
-        padding-left: 10vw;
+        padding-left: 20vw;
         padding-right: 10vw;
         padding-top: 10vh;
         padding-bottom: 10vh;
@@ -233,8 +233,8 @@ h2 {
         padding-bottom: 15vh;
     }
     .about-bg {
-        background-size: cover;
-        background-position: right;
+        background-size: auto 140vh;
+        background-position: -155vw -10vh;
     }
     .videos-bg {
         background-size: cover;
@@ -263,6 +263,10 @@ h2 {
     }
     #music-content {
         margin-left: 3vw;
+    }
+    #videos-content iframe {
+        width: 62vw;
+        height: 35vw;
     }
 }
 
@@ -318,6 +322,10 @@ h2 {
     h1 {
         font-size: 42px;
         margin-top: 6vh;
+    }
+    #videos-content iframe {
+        width: 50vw;
+        height: 28vw;
     }
 }
 
@@ -531,8 +539,6 @@ h2 {
     margin-bottom: 6rem;
     display: inline-block;
     float: center;
-    width: 50vw;
-    height: 28vw;
 }
 
 #videos-content div {
@@ -552,6 +558,7 @@ h2 {
     font-family: badscript;
     text-align-last: right;
     font-size: 30px;
+    margin-bottom: 5rem;
 }
 
 .events-when {
