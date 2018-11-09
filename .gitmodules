@@ -13,3 +13,6 @@
 [submodule "Flocking-Simulation"]
 	path = SWRM
 	url = https://github.com/Fonserbc/Flocking-Simulation
+[submodule "SWRM"]
+	path = SWRM
+	url = https://github.com/Fonserbc/Flocking-Simulation
