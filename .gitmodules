@@ -10,3 +10,6 @@
 [submodule "where-is-santa"]
 	path = where-is-santa
 	url = https://github.com/Fonserbc/where-is-santa
+[submodule "Flocking-Simulation"]
+	path = SWRM
+	url = https://github.com/Fonserbc/Flocking-Simulation
