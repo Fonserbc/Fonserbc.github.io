@@ -16,3 +16,6 @@
 [submodule "SWRM"]
 	path = SWRM
 	url = https://github.com/Fonserbc/Flocking-Simulation
+[submodule "poly60"]
+	path = poly60
+	url = https://github.com/Fonserbc/poly60
