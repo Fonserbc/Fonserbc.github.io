@@ -1,124 +1,203 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-body {
-	background: #D2FAF7;
-	font-family: "Trebuchet MS", Helvetica, sans-serif
-}
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Nunito&display=swap" rel="stylesheet">
 
-canvas {
-	padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
+	<style>
+        body {
+            background: #fffcf0;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Nunito', sans-serif;
+            /*font-family: "Trebuchet MS", Helvetica, sans-serif */
+            padding: 32px;
+            padding-bottom: 128px;
+        }
 
-div {
-	margin: 0 auto;
-	width: 70%;
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Fonserbc</title>
-<link rel="shortcut icon" href="fon.ico" >
-<script src="/js/aes.js"></script>
-<script type="text/javascript">
-	function wantToSendMail () {
-		return CryptoJS.AES.decrypt("U2FsdGVkX1+5gKfiQdRwVbMPSk8zRQULptjr+peoDsueyGOkyDXpawYV2JJ0nnpZ", "Please bots and crawlers stay out").toString(CryptoJS.enc.Utf8);
-	}
-</script>
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            /*z-index: 0;*/
+            pointer-events: none;
+        }
+
+		div {
+			margin: 0 auto;
+			width: 100%;
+		}
+
+        main {
+			max-width: 640px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+        .portrait {
+			position: relative;
+			top: 0px;
+			height: 512px;
+		}
+
+        #portrait-container {
+            background-image: url(/images/ferran_taiwan_farm_not_looking.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+            height: 512px;
+        }
+
+        #links a {
+			margin: 0 8px;
+		}
+
+        .text {
+			text-align: left;
+		}
+
+        .hidden {
+			display: none;
+		}
+
+        .reveal {
+            -webkit-animation: fadeIn 1.3s ease-out;
+            -moz-animation: fadeIn 1.3s ease-out;
+            -o-animation: fadeIn 1.3s ease-out;
+            animation: fadeIn 1.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+				display:none;
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes useKey {
+            0% {
+                color: blue;
+            }
+
+            100% {
+                color: black;
+            }
+        }
+
+        .hidden-key {
+			color: blue;
+		}
+
+        .pressed-key {
+            -webkit-animation: useKey 0.5s ease-out;
+            -moz-animation: useKey 0.5s ease-out;
+            -o-animation: useKey 0.5s ease-out;
+            animation: useKey 0.5s ease-out;
+        }
+	</style>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Ferran Bertomeu Castells</title>
+	<link rel="shortcut icon" href="fon.ico">
+	<script src="/js/aes.js"></script>
+	<script type="text/javascript">
+		function wantToSendMail() {
+			return CryptoJS.AES.decrypt("U2FsdGVkX1+5gKfiQdRwVbMPSk8zRQULptjr+peoDsueyGOkyDXpawYV2JJ0nnpZ", "Please bots and crawlers stay out").toString(CryptoJS.enc.Utf8);
+		}
+	</script>
 </head>
 
 <body>
-	<canvas id="canvas" width="256" height="256" href="https://fonserbc.itch.io" title="Click to go to play things I made">
-        Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element :(
+	<canvas id="canvas">
     </canvas>
 
-	<div>
-		<h1>About me</h1>
-		<p>My name is <b>Ferran Bertomeu Castells</b>, you will also find me online as <i><b>fonserbc</b></i>. I'm currently in Taiwan.</p>
-		<p>I make games sometimes. I program them most of the time.</p>
-		<p>If you want to check my games <a href="https://fonserbc.itch.io">click here</a>.</p>
-		
-		<p>I'm working on a upcoming game at <a href="http://rollingterror.com">http://rollingterror.com</a>.</p>
+	<main>
+		<h1>Ferran Bertomeu Castells</h1>
+		<h2>games - art - music</h2>
+		<p id="portrait-container">
+			<img id="looking-portrait" class="portrait hidden" src="images/ferran_taiwan_farm_looking.jpg" />
+		</p>
+		<h2>links</h2>
+		<p id="links">
+			<a href="#" onmouseover="this.href='mailto:'+wantToSendMail();">email</a>
+			<a target="_blank"href="https://fonserbc.itch.io/">itch</a>
+			<a target="_blank"href="https://twitter.com/fonserbc">twitter</a>
+			<a target="_blank"href="https://instagram.com/fonserbc">instagram</a>
+		</p>
+		<h2>notable works</h2>
+		<p><a target="_blank"href="https://nothke.itch.io/interminal">Interminal</a> (2020), code</p>
+		<p><a target="_blank"href="https://offscore.itch.io/elephants-remember">Off-Score: Elephants Remember</a> (2020), code &amp; design</p>
+		<p><a target="_blank"href="https://offscore.itch.io/copy-machine">Off-Score: Copy Machine</a> (2020), code &amp; design</p>
+		<h2>bio</h2>
+		<div class="text">
+			<p>I'm <b>Ferran Bertomeu Castells</b>, you will also find me online as <b>fonserbc</b>. I'm currently in Taiwan.</p>
+			<p>I'm originally from <a target="_blank" href="https://www.google.com/maps/place/Deltebre">Deltebre</a>, a town in the middle of a <span id="delta-key" class="hidden-key">beautiful delta</span>, somewhere in-between <span id="bcn-key" class="hidden-key">Barcelona</span> and Valencia.</>
+			<p id="delta-content" class="hidden">This delta is unfortunately disappearing because of rising sea-levels and lack of sediments reaching the sea due to the Ebre's 200+ dams.</p>
+			<p id="bcn-content" class="hidden">I grew up in fact in <a target="_blank"href="https://www.google.com/maps/place/Sant+Joan+Despí">Sant Joan Despí</a>, in the metropolitan area of Barcelona, but most of my weekends were spent in Deltebre where all my family is from.</p>
+			<p>I <span id="stockholm-key" class="hidden-key">started</span> my studies in Computer Science at the Facultat d'Informàtica de Barcelona, UPC.</p>
+			<p id="stockholm-content" class="hidden">I ended them in Kungliga Tekniska Högskolan in Stockholm, where I later worked as an <span id="goo-key" class="hidden-key">intern</span><span id="goo-content" class="hidden"> at Goo Technologies' <a target="_blank"href="https://twitter.com/goocreate">GooCreate</a></span>.</p>
+			<p>I've been working freelancing since 2015 doing <span id="work-key" class="hidden-key">game development and design</span> for companies like <a target="_blank"href="http://23divide.com/">23Divide</a> and <a target="_blank"href="https://twitter.com/blockzerogames">Block Zero Games</a>.</p>
+			<p id="work-content" class="hidden">I've been involved in mobile-games development, <span id="arcade-key" class="hidden-key">publishing</span> and <a target="_blank"href="https://www.xflight.app/">XR/VR and webgl content</a> with them.<span id="arcade-content" class="hidden"> I worked on the publishing and porting of <a target="_blank"href="http://www.punchplanet.com/">Punch Planet</a> and <a target="_blank"href="https://lifeslide.io/">Lifeslide</a> to the Apple Arcade.</span></p>
+			<p>I lived in the Netherlands for 6 years until 2021. In Amsterdam is where I started the <a target="_blank" href="http://offscoreproject.com">Off-Score Project</a> alongside <a target="_blank" href="https://yentinglo.net/">YenTing Lo 羅妍婷</a> and <a target="_blank" href="https://mrgan.com/vanja/">Vanja Mrgan</a>.</p>
+			<p>Since I started working with YenTing, I've been interested in making games and interactive media that regard its music as more than just background music.</p>
+			<p>I've been living in Taiwan since June 2021</p>
+		</div>
+	</main>
 
-		<h1>Contact</h1>
-		<p>You can find me at <a href="https://twitter.com/fonserbc">fonserbc</a>.</p>
-		<p>Or <a title="Click to send email"
- href="#" onmouseover="this.href='mailto:'+wantToSendMail();">email me</a>.</p>
-	</div>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-57091670-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script>
+        let port = document.getElementById("portrait-container");
+        let front = document.getElementById("looking-portrait");
+        port.addEventListener("mouseenter", function () {
+            front.classList.remove("hidden");
+        });
+        port.addEventListener("mouseleave", function () {
+            front.classList.add("hidden");
+        });
+        port.addEventListener("mousedown", function () {
+            front.classList.add("hidden");
+        });
+        port.addEventListener("mouseup", function () {
+            front.classList.remove("hidden");
+		});
 
-  ga('create', 'UA-57091670-2', 'auto');
-  ga('send', 'pageview');
+        function textKeyPressed(k) {
+            let key = document.getElementById(k + "-key");
+            let content = document.getElementById(k + "-content");
+            if (content != null && content.classList.contains("hidden")) {
+				content.classList.remove("hidden");
+                content.classList.add("reveal");
+                key.classList.remove("hidden-key");
+				key.classList.add("pressed-key");
+            }
+		}
 
-</script>
-
-<script type="text/javascript" src="js/gl-matrix-min.js"></script>
-<script type="text/javascript" src="js/AssetManager.js"></script>
-<script type="text/javascript" src="js/Cube.js"></script>
-
-<!-- Vertex shader -->
-<script id="shader-vs" type="x-shader/x-vertex">
-	precision mediump float;
-
-    attribute vec3 aPosition;
-    attribute vec3 aNormal;
-    attribute vec2 aTexCoord;
-
-    uniform mat4 uMVMatrix;
-    uniform mat4 uPMatrix;
-    uniform mat3 uNMatrix;
-	uniform vec3 uLightPos;
-
-    varying float vlightNormalApport;
-    varying vec2 vTexCoord;
-	varying vec3 vPos;
-
-    void main(void) {
-        vec4 mvPosition = uMVMatrix * vec4(aPosition, 1.0);
-		vPos = mvPosition.xyz;
-
-        vec3 transformedNormal = uNMatrix * normalize(aNormal);
-        vlightNormalApport = dot(normalize(transformedNormal), normalize(uLightPos - mvPosition.xyz));
-
-        gl_Position = uPMatrix * mvPosition;
-			
-		vTexCoord = aTexCoord;
-    }
-</script>
-
-<!-- Fragment shader -->
-<script id="shader-fs" type="x-shader/x-fragment">
-    precision mediump float;
-
-	uniform vec3 uLightPos;
-	
-    varying float vlightNormalApport;
-	varying vec2 vTexCoord;
-	varying vec3 vPos;
-
-	uniform sampler2D sampler;
-	
-    void main(void) {
-
-    	vec3 lightVec = uLightPos - vPos;
-		float lightDist = length(lightVec);
-		float minLightDist = 27.5;
-		float maxLightDist = 15.0;
-		float lightDistanceApport = (1.0 - (lightDist - maxLightDist)/(minLightDist - maxLightDist));
-	
-        gl_FragColor = vec4(texture2D(sampler, vTexCoord).rgb * lightDistanceApport * vlightNormalApport, 1.0);
-    }
-</script>
-<!-- AnimatedHeader -->
-<script type="text/javascript" src="js/FonserbcAnimatedHeader.js"></script>
+        let keys = document.getElementsByClassName("hidden-key");
+        for (let k of keys) {
+			for (let c of k.classList) {
+				if (c.includes("-key")) {
+					let keyword = k.id.replace("-key", "");
+					k.addEventListener("mousedown", function () {
+						console.log(keyword, "pressed");
+						textKeyPressed(keyword);
+					});
+				}
+			}
+		}
+	</script>
 </body>
 </html>
