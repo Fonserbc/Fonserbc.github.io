@@ -190,6 +190,8 @@
                 content.classList.add("reveal");
                 key.classList.remove("hidden-key");
 				key.classList.add("pressed-key");
+
+                turnAll();
             }
 		}
 
@@ -318,20 +320,30 @@
 
         function ShowFace() {
 			front.classList.remove("hidden");
-			turnAll();
         }
         function HideFace() {
             front.classList.add("hidden");
-            turnAll();
-        }
-        port.addEventListener("mouseenter", ShowFace);
+		}
+		port.addEventListener("mouseenter", ShowFace);
         port.addEventListener("mouseleave", HideFace);
-        port.addEventListener("mousedown", HideFace);
-        port.addEventListener("mouseup", ShowFace);
-        document.addEventListener("mousedown", ShowFace);
-        document.addEventListener("mouseup", HideFace);
+		port.addEventListener("mousedown", function () {
+			HideFace();
+			turnAll();
+		});
+		port.addEventListener("mouseup", function () {
+			ShowFace();
+			turnAll()
+		});
         document.addEventListener("touchstart", ShowFace);
-        document.addEventListener("touchend", HideFace);
+		document.addEventListener("touchend", HideFace);
+        port.addEventListener("touchstart", function () {
+            ShowFace();
+            turnAll();
+        });
+        port.addEventListener("touchend", function () {
+            HideFace();
+            turnAll()
+        });
 	</script>
 </body>
 </html>
