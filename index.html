@@ -106,6 +106,10 @@
             -o-animation: useKey 0.5s ease-out;
             animation: useKey 0.5s ease-out;
         }
+
+        #works p a{
+			letter-spacing: 2px;
+		}
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Ferran Bertomeu Castells</title>
@@ -131,27 +135,37 @@
 		<h2>links</h2>
 		<p id="links">
 			<a href="#" onmouseover="this.href='mailto:'+wantToSendMail();">email</a>
-			<a target="_blank"href="https://fonserbc.itch.io/">games</a>
-			<a target="_blank"href="https://twitter.com/fonserbc">twitter</a>
-			<a target="_blank"href="https://instagram.com/fonserbc">instagram</a>
+			<a target="_blank" href="https://fonserbc.itch.io/">games</a>
+			<a target="_blank" href="https://twitter.com/fonserbc">twitter</a>
+			<a target="_blank" href="https://instagram.com/fonserbc">instagram</a>
 		</p>
 		<h2>notable works</h2>
-		<p><a target="_blank"href="https://nothke.itch.io/interminal">Interminal</a> (2020), code</p>
-		<p><a target="_blank"href="https://offscore.itch.io/elephants-remember">Off-Score: Elephants Remember</a> (2020), code &amp; design</p>
-		<p><a target="_blank"href="https://offscore.itch.io/copy-machine">Off-Score: Copy Machine</a> (2020), code &amp; design</p>
+		<div id="works">
+			<p><a target="_blank" href="https://nothke.itch.io/interminal">Interminal</a> (2020), code</p>
+			<p><a target="_blank" href="https://fonserbc.itch.io/coches-de-choque">Coches de Choque</a> (2020), solo</p>
+			<p><a target="_blank" href="https://offscore.itch.io/elephants-remember">Elephants Remember</a> (2020), code &amp; design</p>
+			<p><a target="_blank" href="https://www.youtube.com/watch?v=jPGI9UTk_JA">Summer Festival</a> (2020), sound &amp; visuals</p>
+			<p><a target="_blank" href="https://offscore.itch.io/copy-machine">Copy Machine</a> (2020), code &amp; design</p>
+			<p><a target="_blank" href="https://fonserbc.itch.io/poly-60">Poly-60</a> (2019), code &amp; design</p>
+			<p><a target="_blank" href="https://nothke.itch.io/jamsterdam">Jamsterdam</a> (2019), code &amp; music</p>
+			<p><a target="_blank" href="https://fonserbc.itch.io/pianobots">Pianobots</a> (2018), code &amp; visuals</p>
+			<p><a target="_blank" href="https://fonserbc.itch.io/found">Found</a> (2018), code &amp; design</p>
+			<p><a target="_blank" href="https://fonserbc.itch.io/forget-the-brakes">Forget the Brakes!</a> (2015), code &amp; design</p>
+		</div>
 		<h2>bio</h2>
 		<div class="text">
-			<p>I'm <b>Ferran Bertomeu Castells</b>, you will also find me online as <b>fonserbc</b>. I'm currently in Taiwan.</p>
+			<p>I'm <b>Ferran Bertomeu Castells</b>, you will also find me online as <b>fonserbc</b>. I'm currently in <span id="tw-content" class="hidden">Taipei, </span><span id="tw-key" class="hidden-key">Taiwan</span>.</p>
 			<p>I'm originally from <a target="_blank" href="https://www.google.com/maps/place/Deltebre">Deltebre</a>, a town in the middle of a <span id="delta-key" class="hidden-key">beautiful delta</span>, somewhere in-between <span id="bcn-key" class="hidden-key">Barcelona</span> and Valencia.</>
 			<p id="delta-content" class="hidden">This delta is unfortunately disappearing because of rising sea-levels and lack of sediments reaching the sea due to the <a target="_blank" href="https://en.wikipedia.org/wiki/Ebro">Ebre</a>'s 200+ dams.</p>
-			<p id="bcn-content" class="hidden">I grew up in fact in <a target="_blank"href="https://www.google.com/maps/place/Sant+Joan+Despí">Sant Joan Despí</a>, in the metropolitan area of Barcelona, but most of my weekends were spent in Deltebre where all my family is from.</p>
-			<p>I <span id="stockholm-key" class="hidden-key">started</span> my studies in Computer Science at the Facultat d'Informàtica de Barcelona, UPC.</p>
-			<p id="stockholm-content" class="hidden">I ended them in Kungliga Tekniska Högskolan in Stockholm, where I later worked as an <span id="goo-key" class="hidden-key">intern</span><span id="goo-content" class="hidden"> at Goo Technologies' <a target="_blank"href="https://twitter.com/goocreate">GooCreate</a></span>.</p>
-			<p>I've been working freelancing since 2015 doing <span id="work-key" class="hidden-key">game development and design</span> for companies like <a target="_blank"href="http://23divide.com/">23Divide</a> and <a target="_blank"href="https://twitter.com/blockzerogames">Block Zero Games</a>.</p>
-			<p id="work-content" class="hidden">I've been involved in mobile-games development, <span id="arcade-key" class="hidden-key">publishing</span> and <a target="_blank"href="https://www.xflight.app/">XR/VR and webgl content</a> with them.<span id="arcade-content" class="hidden"> I worked on the publishing and porting of <a target="_blank"href="http://www.punchplanet.com/">Punch Planet</a> and <a target="_blank"href="https://lifeslide.io/">Lifeslide</a> to the Apple Arcade.</span></p>
+			<p id="bcn-content" class="hidden">I grew up in fact in <a target="_blank" href="https://www.google.com/maps/place/Sant+Joan+Despí">Sant Joan Despí</a>, in the metropolitan area of Barcelona, but most of my weekends were spent in Deltebre where all my family is from.</p>
+			<p>I <span id="stockholm-key" class="hidden-key">started</span> my studies in Computer Science at the <span id="vga-key" class="hidden-key">Facultat d'Informàtica de Barcelona</span>, UPC.</p>
+			<p id="stockholm-content" class="hidden">I ended them in Kungliga Tekniska Högskolan in Stockholm, where I later worked as an <span id="goo-key" class="hidden-key">intern</span><span id="goo-content" class="hidden"> at Goo Technologies' <a target="_blank" href="https://twitter.com/goocreate">GooCreate</a></span>.</p>
+			<p id="vga-content" class="hidden">I've helped with the organization of the Global Game Jam <a target="_blank" href="https://twitter.com/Gamejambcn">location in Barcelona</a> for many years, as a member of the student association <a target="_blank" href="https://twitter.com/vgafib">VGAFIB</a>.</p>
+			<p>I've been working freelancing since 2015 doing <span id="work-key" class="hidden-key">game development and design</span> for companies like <a target="_blank" href="http://23divide.com/">23Divide</a> and <a target="_blank" href="https://twitter.com/blockzerogames">Block Zero Games</a>.</p>
+			<p id="work-content" class="hidden">I've been involved in mobile-games development, <span id="arcade-key" class="hidden-key">publishing</span> and <a target="_blank" href="https://www.xflight.app/">XR/VR and webgl content</a> with them.<span id="arcade-content" class="hidden"> I worked on the publishing and porting of <a target="_blank" href="http://www.punchplanet.com/">Punch Planet</a> and <a target="_blank" href="https://lifeslide.io/">Lifeslide</a> to the Apple Arcade.</span></p>
 			<p>I lived in the Netherlands for 6 years until 2021. In Amsterdam is where I started the <a target="_blank" href="http://offscoreproject.com">Off-Score Project</a> alongside <a target="_blank" href="https://yentinglo.net/">YenTing Lo <span class="zh">羅妍婷</span></a> and <a target="_blank" href="https://mrgan.com/vanja/">Vanja Mrgan</a>.</p>
 			<p>Since I started working with YenTing, I've been interested in making games and interactive media that regard its music as more than just background music.</p>
-			<p>I've been living in Taiwan since June 2021</p>
+			<p>I've been living in Taiwan since June 2021.</p>
 		</div>
 	</main>
 
@@ -198,7 +212,6 @@
 				if (c.includes("-key")) {
 					let keyword = k.id.replace("-key", "");
 					k.addEventListener("mousedown", function () {
-						console.log(keyword, "pressed");
 						textKeyPressed(keyword);
 					});
 				}
