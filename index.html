@@ -21,7 +21,7 @@
             position: absolute;
             top: 0px;
             left: 0px;
-            /*z-index: 0;*/
+            z-index: -1;
             pointer-events: none;
         }
 
@@ -31,14 +31,16 @@
 
 		div {
 			margin: 0 auto;
-			width: 100%;
 		}
 
         main {
-			max-width: 640px;
-			margin: 0 auto;
-			text-align: center;
-		}
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+            background: #fffcf0;
+            padding-top: 1px;
+            padding-bottom: 32px;
+        }
 
         .portrait {
             position: relative;
@@ -61,6 +63,7 @@
 
         .text {
 			text-align: left;
+			margin: 0px 32px;
 		}
 
         .hidden {
@@ -217,6 +220,69 @@
 				}
 			}
 		}
+	</script>
+	<script>
+        let canvas = document.getElementById("canvas");
+        let width = document.body.clientWidth;
+		let height = document.body.clientHeight;
+		canvas.width = width;
+		canvas.height = height;
+		let ctx = canvas.getContext("2d");
+		console.log(canvas.width, canvas.height);
+
+		let speed = height * 0.1;
+
+		let brushCount = 16;
+
+		let brushes = [];
+
+        function mod(n, m) {
+            return ((n % m) + m) % m;
+        }
+
+		for (let i = 0; i < brushCount; ++i) {
+			let brush = {
+				x: Math.random() * width,
+				y: Math.random() * height,
+				angle: Math.random() * Math.PI * 2
+			};
+			brushes.push(brush);
+		}
+
+		ctx.strokeStyle = 'blue';
+		ctx.lineWidth = 4;
+
+		function update(deltaTime) {
+			for (let i = 0; i < brushCount; ++i) {
+				let newPos = {
+					x: brushes[i].x,
+					y: brushes[i].y
+				};
+
+                newPos.x += speed * Math.cos(brushes[i].angle) * deltaTime;
+                newPos.y += speed * Math.sin(brushes[i].angle) * deltaTime;
+
+                ctx.beginPath();
+				ctx.moveTo(brushes[i].x, brushes[i].y);
+				ctx.lineTo(newPos.x, newPos.y);
+				ctx.stroke();
+
+				brushes[i].x = mod(newPos.x, width);
+                brushes[i].y = mod(newPos.y, height);
+			}
+		}
+
+		let lastUpdate = Date.now();
+        function animate() {
+            requestAnimationFrame(animate);
+            let now = Date.now();
+            let deltaTime = Math.min(1 / 15, (now - lastUpdate) / 1000);
+			lastUpdate = now;
+
+            update(deltaTime);
+		}
+
+		animate();
 	</script>
 </body>
 </html>
