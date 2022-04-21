@@ -8,7 +8,6 @@
 	<style>
         body {
             background: #fffcf0;
-            font-family: 'Noto Sans TC', sans-serif;
             font-family: 'Nunito', sans-serif;
             /*font-family: "Trebuchet MS", Helvetica, sans-serif */
             padding: 32px;
@@ -26,6 +25,10 @@
             pointer-events: none;
         }
 
+        .zh {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
 		div {
 			margin: 0 auto;
 			width: 100%;
@@ -38,10 +41,11 @@
 		}
 
         .portrait {
-			position: relative;
-			top: 0px;
-			height: 512px;
-		}
+            position: relative;
+            top: 0px;
+            height: 512px;
+            cursor: pointer;
+        }
 
         #portrait-container {
             background-image: url(/images/ferran_taiwan_farm_not_looking.jpg);
@@ -92,8 +96,9 @@
         }
 
         .hidden-key {
-			color: blue;
-		}
+            color: blue;
+            cursor: pointer;
+        }
 
         .pressed-key {
             -webkit-animation: useKey 0.5s ease-out;
@@ -126,7 +131,7 @@
 		<h2>links</h2>
 		<p id="links">
 			<a href="#" onmouseover="this.href='mailto:'+wantToSendMail();">email</a>
-			<a target="_blank"href="https://fonserbc.itch.io/">itch</a>
+			<a target="_blank"href="https://fonserbc.itch.io/">games</a>
 			<a target="_blank"href="https://twitter.com/fonserbc">twitter</a>
 			<a target="_blank"href="https://instagram.com/fonserbc">instagram</a>
 		</p>
@@ -138,13 +143,13 @@
 		<div class="text">
 			<p>I'm <b>Ferran Bertomeu Castells</b>, you will also find me online as <b>fonserbc</b>. I'm currently in Taiwan.</p>
 			<p>I'm originally from <a target="_blank" href="https://www.google.com/maps/place/Deltebre">Deltebre</a>, a town in the middle of a <span id="delta-key" class="hidden-key">beautiful delta</span>, somewhere in-between <span id="bcn-key" class="hidden-key">Barcelona</span> and Valencia.</>
-			<p id="delta-content" class="hidden">This delta is unfortunately disappearing because of rising sea-levels and lack of sediments reaching the sea due to the Ebre's 200+ dams.</p>
+			<p id="delta-content" class="hidden">This delta is unfortunately disappearing because of rising sea-levels and lack of sediments reaching the sea due to the <a target="_blank" href="https://en.wikipedia.org/wiki/Ebro">Ebre</a>'s 200+ dams.</p>
 			<p id="bcn-content" class="hidden">I grew up in fact in <a target="_blank"href="https://www.google.com/maps/place/Sant+Joan+Despí">Sant Joan Despí</a>, in the metropolitan area of Barcelona, but most of my weekends were spent in Deltebre where all my family is from.</p>
 			<p>I <span id="stockholm-key" class="hidden-key">started</span> my studies in Computer Science at the Facultat d'Informàtica de Barcelona, UPC.</p>
 			<p id="stockholm-content" class="hidden">I ended them in Kungliga Tekniska Högskolan in Stockholm, where I later worked as an <span id="goo-key" class="hidden-key">intern</span><span id="goo-content" class="hidden"> at Goo Technologies' <a target="_blank"href="https://twitter.com/goocreate">GooCreate</a></span>.</p>
 			<p>I've been working freelancing since 2015 doing <span id="work-key" class="hidden-key">game development and design</span> for companies like <a target="_blank"href="http://23divide.com/">23Divide</a> and <a target="_blank"href="https://twitter.com/blockzerogames">Block Zero Games</a>.</p>
 			<p id="work-content" class="hidden">I've been involved in mobile-games development, <span id="arcade-key" class="hidden-key">publishing</span> and <a target="_blank"href="https://www.xflight.app/">XR/VR and webgl content</a> with them.<span id="arcade-content" class="hidden"> I worked on the publishing and porting of <a target="_blank"href="http://www.punchplanet.com/">Punch Planet</a> and <a target="_blank"href="https://lifeslide.io/">Lifeslide</a> to the Apple Arcade.</span></p>
-			<p>I lived in the Netherlands for 6 years until 2021. In Amsterdam is where I started the <a target="_blank" href="http://offscoreproject.com">Off-Score Project</a> alongside <a target="_blank" href="https://yentinglo.net/">YenTing Lo 羅妍婷</a> and <a target="_blank" href="https://mrgan.com/vanja/">Vanja Mrgan</a>.</p>
+			<p>I lived in the Netherlands for 6 years until 2021. In Amsterdam is where I started the <a target="_blank" href="http://offscoreproject.com">Off-Score Project</a> alongside <a target="_blank" href="https://yentinglo.net/">YenTing Lo <span class="zh">羅妍婷</span></a> and <a target="_blank" href="https://mrgan.com/vanja/">Vanja Mrgan</a>.</p>
 			<p>Since I started working with YenTing, I've been interested in making games and interactive media that regard its music as more than just background music.</p>
 			<p>I've been living in Taiwan since June 2021</p>
 		</div>
@@ -161,19 +166,20 @@
 	</script>
 	<script>
         let port = document.getElementById("portrait-container");
-        let front = document.getElementById("looking-portrait");
-        port.addEventListener("mouseenter", function () {
+		let front = document.getElementById("looking-portrait");
+
+        function ShowFace() {
             front.classList.remove("hidden");
-        });
-        port.addEventListener("mouseleave", function () {
+		}
+        function HideFace() {
             front.classList.add("hidden");
-        });
-        port.addEventListener("mousedown", function () {
-            front.classList.add("hidden");
-        });
-        port.addEventListener("mouseup", function () {
-            front.classList.remove("hidden");
-		});
+		}
+        port.addEventListener("mouseenter", ShowFace);
+        port.addEventListener("mouseleave", HideFace);
+        port.addEventListener("mousedown", HideFace);
+		port.addEventListener("mouseup", ShowFace);
+		document.addEventListener("touchstart", ShowFace);
+        document.addEventListener("touchend", HideFace);
 
         function textKeyPressed(k) {
             let key = document.getElementById(k + "-key");
