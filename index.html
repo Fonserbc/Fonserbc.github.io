@@ -1,118 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Nunito&display=swap" rel="stylesheet">
 
 	<style>
-        body {
-            background: #fffcf0;
-            font-family: 'Nunito', sans-serif;
-            /*font-family: "Trebuchet MS", Helvetica, sans-serif */
-            padding: 32px;
-            padding-bottom: 128px;
+        html {
+            /* ios safari mobile viewport bug fix */
+            height: -webkit-fill-available;
         }
+		body {
+			background: #fffcf0;
+			font-family: 'Nunito', sans-serif;
+			/*font-family: "Trebuchet MS", Helvetica, sans-serif */
+			padding: 32px;
+			padding-bottom: 128px;
+		}
 
-        canvas {
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            z-index: -1;
-            pointer-events: none;
-        }
+		canvas {
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: -1;
+			pointer-events: none;
+		}
 
-        .zh {
-            font-family: 'Noto Sans TC', sans-serif;
-        }
+		.zh {
+			font-family: 'Noto Sans TC', sans-serif;
+		}
 
 		div {
 			margin: 0 auto;
 		}
 
-        main {
-            max-width: 640px;
-            margin: 0 auto;
-            text-align: center;
-            background: #fffcf0;
-            padding-top: 1px;
-            padding-bottom: 32px;
-        }
+		main {
+			max-width: 640px;
+			margin: 0 auto;
+			text-align: center;
+			background: #fffcf0;
+			padding-top: 1px;
+			padding-bottom: 32px;
+		}
 
-        .portrait {
-            position: relative;
-            top: 0px;
-            height: 512px;
-            cursor: pointer;
-        }
+		.portrait {
+			position: relative;
+			top: 0px;
+			height: 512px;
+			cursor: pointer;
+		}
 
-        #portrait-container {
-            background-image: url(/images/ferran_taiwan_farm_not_looking.jpg);
+		#portrait-container {
+			background-image: url(/images/ferran_taiwan_farm_not_looking.jpg);
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
-            height: 512px;
-        }
+			height: 512px;
+		}
 
-        #links a {
+		#links a {
 			margin: 0 8px;
 		}
 
-        .text {
+		.text {
 			text-align: left;
 			margin: 0px 32px;
 		}
 
-        .hidden {
+		.hidden {
 			display: none;
 		}
 
-        .reveal {
-            -webkit-animation: fadeIn 1.3s ease-out;
-            -moz-animation: fadeIn 1.3s ease-out;
-            -o-animation: fadeIn 1.3s ease-out;
-            animation: fadeIn 1.3s ease-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-				display:none;
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes useKey {
-            0% {
-                color: blue;
-            }
-
-            100% {
-                color: black;
-            }
-        }
-
-        .hidden-key {
-            color: blue;
-            cursor: pointer;
-        }
-
-        .pressed-key {
-            -webkit-animation: useKey 0.5s ease-out;
-            -moz-animation: useKey 0.5s ease-out;
-            -o-animation: useKey 0.5s ease-out;
-            animation: useKey 0.5s ease-out;
-        }
-
-        #works p a{
-			letter-spacing: 2px;
+		.reveal {
+			-webkit-animation: fadeIn 1.3s ease-out;
+			-moz-animation: fadeIn 1.3s ease-out;
+			-o-animation: fadeIn 1.3s ease-out;
+			animation: fadeIn 1.3s ease-out;
 		}
+
+		@keyframes fadeIn {
+			0% {
+				display: none;
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes useKey {
+			0% {
+				color: blue;
+			}
+
+			100% {
+				color: black;
+			}
+		}
+
+		.hidden-key {
+			color: blue;
+			cursor: pointer;
+		}
+
+		.pressed-key {
+			-webkit-animation: useKey 0.5s ease-out;
+			-moz-animation: useKey 0.5s ease-out;
+			-o-animation: useKey 0.5s ease-out;
+			animation: useKey 0.5s ease-out;
+		}
+
+        #works p a {
+            /*letter-spacing: 2px;*/
+        }
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Ferran Bertomeu Castells</title>
@@ -138,22 +143,29 @@
 		<h2>links</h2>
 		<p id="links">
 			<a href="#" onmouseover="this.href='mailto:'+wantToSendMail();">email</a>
-			<a target="_blank" href="https://fonserbc.itch.io/">games</a>
+			<a target="_blank" href="https://fonserbc.itch.io/">itch.io</a>
 			<a target="_blank" href="https://twitter.com/fonserbc">twitter</a>
 			<a target="_blank" href="https://instagram.com/fonserbc">instagram</a>
 		</p>
-		<h2>notable works</h2>
+		<h2>games  ∩  music</h2>
 		<div id="works">
-			<p><a target="_blank" href="https://nothke.itch.io/interminal">Interminal</a> (2020), code</p>
-			<p><a target="_blank" href="https://fonserbc.itch.io/coches-de-choque">Coches de Choque</a> (2020), solo</p>
-			<p><a target="_blank" href="https://offscore.itch.io/elephants-remember">Elephants Remember</a> (2020), code &amp; design</p>
+			<p><a target="_blank" href="https://offscore.itch.io/elephants-remember">Off-Score: Elephants Remember</a> (2020), code &amp; design</p>
+			<p><a target="_blank" href="https://fonserbc.itch.io/keyboard-guitarra">Keyboard Guitarra</a> (2020), code &amp; design</p>
 			<p><a target="_blank" href="https://www.youtube.com/watch?v=jPGI9UTk_JA">Summer Festival</a> (2020), sound &amp; visuals</p>
-			<p><a target="_blank" href="https://offscore.itch.io/copy-machine">Copy Machine</a> (2020), code &amp; design</p>
+			<p><a target="_blank" href="https://offscore.itch.io/copy-machine">Off-Score: Copy Machine</a> (2020), code &amp; design</p>
 			<p><a target="_blank" href="https://fonserbc.itch.io/poly-60">Poly-60</a> (2019), code &amp; design</p>
 			<p><a target="_blank" href="https://nothke.itch.io/jamsterdam">Jamsterdam</a> (2019), code &amp; music</p>
 			<p><a target="_blank" href="https://fonserbc.itch.io/pianobots">Pianobots</a> (2018), code &amp; visuals</p>
+		</div>
+		<h2>other works</h2>
+		<div id="works">
+			<p><a target="_blank" href="https://the-nomi.itch.io/mac-n-cheddar">Mac &amp; Cheddar</a> (2022), code</p>
+			<p><a target="_blank" href="https://nothke.itch.io/interminal">Interminal</a> (2020), code</p>
+			<p><a target="_blank" href="https://fonserbc.itch.io/coches-de-choque">Coches de Choque</a> (2020), solo</p>
+			<p><a target="_blank" href="https://fonserbc.itch.io/missing-masks-cleaning-tasks">Missing Masks Cleaning Tasks</a> (2020), code &amp; design</p>
 			<p><a target="_blank" href="https://fonserbc.itch.io/found">Found</a> (2018), code &amp; design</p>
 			<p><a target="_blank" href="https://fonserbc.itch.io/forget-the-brakes">Forget the Brakes!</a> (2015), code &amp; design</p>
+			<p>&amp; other things on <a target="_blank" href="https://fonserbc.itch.io/">my itch.io</a></p>
 		</div>
 		<h2>bio</h2>
 		<div class="text">
@@ -182,6 +194,7 @@
 		ga('send', 'pageview');
 	</script>
 	<script>
+		// Ink-like thing
         function textKeyPressed(k) {
             let key = document.getElementById(k + "-key");
             let content = document.getElementById(k + "-content");
@@ -220,7 +233,7 @@
 		let ctx = canvas.getContext("2d");
 		console.log(canvas.width, canvas.height);
 
-		let speed = height * 0.33;
+		let speed = height * 0.25;
 		let turningSpeed = Math.PI * 1.2;
 
 		let brushCount = 16;
@@ -228,6 +241,15 @@
 		let lineSpaceOffset = 0;
 
 		let brushes = [];
+
+		let hues = [204];//, 190,217];
+		let currentHue = 0;
+		let lastHue = 0;
+		let hueTime = 1;
+
+		let timedTurnPeriod = 2;
+		let timedTurnIt = 0;
+		let timedTurnCountdown = timedTurnPeriod;
 
         function mod(n, m) {
             return ((n % m) + m) % m;
@@ -248,22 +270,35 @@
 			brushes.push(brush);
 		}
 
-        function turnBrush(i) {
+        function turnBrush(i, maxAngle = Math.PI, factor = 0) {
 			if (brushes[i].turning) return;
 
-            brushes[i].wantedAngle = brushes[i].angle + Math.random() * Math.PI * 2 - Math.PI;
+            brushes[i].wantedAngle = brushes[i].angle + Math.random() * maxAngle * 2 - maxAngle;
 			brushes[i].fromAngle = brushes[i].angle;
 			let timeToAngle = Math.abs(brushes[i].fromAngle - brushes[i].wantedAngle) / turningSpeed;
 			brushes[i].turningNormalizedSpeed = 1 / timeToAngle;
-			brushes[i].turnedFactor = 0;
-			brushes[i].turning = true;
+            brushes[i].turnedFactor = factor;
+			brushes[i].turning = factor < 1;
+			if (factor >= 1) {
+				brushes[i].angle = brushes[i].wantedAngle;
+			}
 		}
 
         ctx.strokeStyle = '#24556d';
 
 		function update(time, deltaTime) {
-			let color = "hsl(204," + (50 + (Math.sin(time * 0.1) + 1) / 2 * 30) + "%," + (20 + (Math.cos(time * 0.3) + 1) / 2 * 80) + "%)";
-            ctx.strokeStyle = color;
+			hueTime = Math.min(1, hueTime + deltaTime);
+			let hue = lerp(hues[lastHue], hues[currentHue], hueTime);
+            let color = `hsl(${hue},${(20 + (Math.sin(time * 0.1) + 1) / 2 * 40)}%, ${(60 + (Math.cos(time * 0.3) + 1) / 2 * 30)}%)`;
+			ctx.strokeStyle = color;
+
+			timedTurnCountdown -= deltaTime;
+			if (timedTurnCountdown <= 0) {
+				turnBrush(timedTurnIt, Math.PI * 0.3);
+
+				timedTurnIt = (timedTurnIt + 1) % brushCount;
+                timedTurnCountdown += Math.random();//0.5 + Math.random() * timedTurnPeriod;
+			}
 
 			//console.log(ctx.strokeStyle, color);
 
@@ -310,7 +345,13 @@
 
 		function turnAll() {
 			for (let i = 0; i < brushCount; ++i) {
-				turnBrush(i);
+				turnBrush(i, Math.PI * 2);
+			}
+
+			if (hueTime >= 1) {
+				lastHue = currentHue;
+				currentHue = (currentHue + 1) % hues.length;
+				hueTime = 0;
 			}
 		}
 
