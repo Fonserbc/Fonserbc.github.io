@@ -251,6 +251,7 @@
 		let timedTurnIt = 0;
 		let timedTurnCountdown = timedTurnPeriod;
 
+		let needCheckResize = true;
 		function checkWindowResize() {
             let w = document.body.clientWidth;
 			let h = document.body.clientHeight;
@@ -354,7 +355,10 @@
 			accTime += deltaTime;
 			lastUpdate = now;
 
-			checkWindowResize();
+			if (needCheckResize) {
+				needCheckResize = false;
+				checkWindowResize();
+			}
 
             update(accTime, deltaTime);
 		}
