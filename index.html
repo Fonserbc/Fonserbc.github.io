@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Nunito&display=swap" rel="stylesheet">
 
 	<style>
-        html {
-            /* ios safari mobile viewport bug fix */
-            height: -webkit-fill-available;
-        }
+		html {
+			/* ios safari mobile viewport bug fix */
+			height: -webkit-fill-available;
+		}
+
 		body {
 			background: #fffcf0;
 			font-family: 'Nunito', sans-serif;
@@ -115,9 +116,9 @@
 			animation: useKey 0.5s ease-out;
 		}
 
-        #works p a {
-            /*letter-spacing: 2px;*/
-        }
+		#works p a {
+			/*letter-spacing: 2px;*/
+		}
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Ferran Bertomeu Castells</title>
@@ -231,7 +232,6 @@
 		canvas.width = width;
 		canvas.height = height;
 		let ctx = canvas.getContext("2d");
-		console.log(canvas.width, canvas.height);
 
 		let speed = height * 0.25;
 		let turningSpeed = Math.PI * 1.2;
@@ -250,6 +250,22 @@
 		let timedTurnPeriod = 2;
 		let timedTurnIt = 0;
 		let timedTurnCountdown = timedTurnPeriod;
+
+		function checkWindowResize() {
+            let w = document.body.clientWidth;
+			let h = document.body.clientHeight;
+			if (w != width || h != height) {
+
+				let temp = ctx.getImageData(0, 0, width, height);
+
+				width = w;
+				height = h;
+				canvas.width = width;
+				canvas.height = height;
+
+                ctx.putImageData(temp, 0, 0);
+			}
+		}
 
         function mod(n, m) {
             return ((n % m) + m) % m;
@@ -338,10 +354,10 @@
 			accTime += deltaTime;
 			lastUpdate = now;
 
+			checkWindowResize();
+
             update(accTime, deltaTime);
 		}
-
-		animate();
 
 		function turnAll() {
 			for (let i = 0; i < brushCount; ++i) {
@@ -384,7 +400,9 @@
         port.addEventListener("touchend", function () {
             HideFace();
             turnAll()
-        });
+		});
+
+        requestAnimationFrame(animate);
 	</script>
 </body>
 </html>
