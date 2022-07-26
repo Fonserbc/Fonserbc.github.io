@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Lillium game</title>
+
+    <meta name="viewport" content="viewport-fit=cover, user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width, height=device-height"> <!--width=device-width-->
+    <!-- Startup configuration -->
+    <link rel="manifest" href="app.webmanifest">
+
+    <!-- Fallback application metadata for legacy browsers -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/temp-icon.jpg">
+    <link rel="icon" href="img/temp-icon.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="safe-area">
+        <div id="virtual-console">
+            <canvas id="canvas"></canvas>
+            <div id="controls">
+                <img id="dpad" src="img/dpad.png"></img>
+                <span class="round-button" id="r-button"></span>
+                <span class="round-button" id="l-button"></span>
+            </div>
+
+            <!-- Debug resolution -->
+            <div style="position:fixed; display:flex; bottom:0; left:0;right:0;align-items:center;">
+                <p id="resolution">800x600</p>
+            </div>
+        </div>
+
+        <!--
+        <div id="centered-container">
+            <p class="centered-p">800x600</p>
+        </div>
+        -->
+
+        <button id="fullscreen-button" onclick="window.toggleFullScreen()">
+            Fullscreen
+        </button>
+    </div>
+
+    <!-- <script type="text/javascript" src="lib/core/fmodL.js"></script> -->
+    <script type="text/javascript" src="lib/studio/fmodstudioL.js"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>

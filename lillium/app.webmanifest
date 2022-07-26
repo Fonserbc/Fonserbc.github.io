@@ -1,0 +1,23 @@
+﻿{
+    "name": "Lillium game",
+    "short_name": "Lillium game",
+    "description": "Catch the monkey",
+    "icons": [
+        {
+            "src": "img/temp-icon.jpg",
+            //"sizes": "512x512",
+            "type": "image/jpg"
+        },
+        {
+            "src": "img/temp-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./",
+    "scope": ".",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "white",
+    "background_color": "black"
+}
