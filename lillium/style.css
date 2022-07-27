@@ -103,8 +103,9 @@ canvas {
 #dpad {
     width: 40%;
     margin: 12px;
-    display:block;
-    touch-action:none;
+    display: block;
+    touch-action: none;
+    cursor: pointer;
 }
 
 #virtual-console {
@@ -117,16 +118,18 @@ canvas {
 #controls {
     position:relative;
     touch-action:none;
+    padding-bottom: 4px;
 }
 
 .round-button {
-    touch-action:none;
+    touch-action: none;
     border-radius: 50%;
     width: 20%;
     margin-right: 12px;
     aspect-ratio: 1 / 1;
-    position:absolute;
-    display:block;
+    position: absolute;
+    display: block;
+    cursor: pointer;
 }
 
 #r-button {
@@ -138,6 +141,18 @@ canvas {
     background-color: black;
     right: 22%;
     top:28%;
+}
+
+#end-button {
+    display: block;
+    border-radius: 32px;
+    background-color: #cc2222;
+    width: 128px;
+    height: 48px;
+    margin: auto;
+    bottom: 4px;
+    position: relative;
+    margin-bottom: 4px;
 }
 
 .pressed-button {
