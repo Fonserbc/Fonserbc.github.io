@@ -56,7 +56,8 @@ body {
 
 #virtual-console {
     width: 100%;
-    max-width: min(65vh, 1024px); /*min(95vh, 2024px);*/
+    max-width: min(95vh, 2024px);
+    /*min(65vh, 1024px);*/
 }
 canvas {
     width: 100%;
