@@ -306,7 +306,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"9812015f53d07bb1f6c6.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/BayerDither8x8.png?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/9812015f53d07bb1f6c6.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/BayerDither8x8.png?");
 
 /***/ }),
 
@@ -316,7 +316,7 @@ eval("module.exports = __webpack_require__.p + \"9812015f53d07bb1f6c6.png\";\n\n
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"76f9210a7b6f0664173f.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/crosshair_lighter.png?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/76f9210a7b6f0664173f.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/crosshair_lighter.png?");
 
 /***/ }),
 
@@ -326,7 +326,7 @@ eval("module.exports = __webpack_require__.p + \"76f9210a7b6f0664173f.png\";\n\n
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"2a47bbc1514560fcc9e8.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/crosswalk.png?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/2a47bbc1514560fcc9e8.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/crosswalk.png?");
 
 /***/ }),
 
@@ -336,7 +336,7 @@ eval("module.exports = __webpack_require__.p + \"2a47bbc1514560fcc9e8.png\";\n\n
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"9f4482ed7bd1341ad6dc.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/gradient_mango_2.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/9f4482ed7bd1341ad6dc.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/gradient_mango_2.jpg?");
 
 /***/ }),
 
@@ -346,7 +346,7 @@ eval("module.exports = __webpack_require__.p + \"9f4482ed7bd1341ad6dc.jpg\";\n\n
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"ab8f5bea8bd744d4d2cb.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/gradient_peach.png?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/ab8f5bea8bd744d4d2cb.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/gradient_peach.png?");
 
 /***/ }),
 
@@ -356,7 +356,7 @@ eval("module.exports = __webpack_require__.p + \"ab8f5bea8bd744d4d2cb.png\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"8df652d9e2609aa64df8.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/presstostart.png?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/8df652d9e2609aa64df8.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/presstostart.png?");
 
 /***/ }),
 
@@ -366,7 +366,7 @@ eval("module.exports = __webpack_require__.p + \"8df652d9e2609aa64df8.png\";\n\n
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"cd7c276f753841bcf0fe.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/road.png?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/cd7c276f753841bcf0fe.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/road.png?");
 
 /***/ }),
 
@@ -376,7 +376,7 @@ eval("module.exports = __webpack_require__.p + \"cd7c276f753841bcf0fe.png\";\n\n
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"3bd3629be04e76c74d2e.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/breakfast-1.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/3bd3629be04e76c74d2e.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/breakfast-1.jpg?");
 
 /***/ }),
 
@@ -386,7 +386,7 @@ eval("module.exports = __webpack_require__.p + \"3bd3629be04e76c74d2e.jpg\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"02c67a5ad6a506fd210e.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/cafe-1.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/02c67a5ad6a506fd210e.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/cafe-1.jpg?");
 
 /***/ }),
 
@@ -396,7 +396,7 @@ eval("module.exports = __webpack_require__.p + \"02c67a5ad6a506fd210e.jpg\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"63ab6c9f63d45daec79a.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/cafe-2.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/63ab6c9f63d45daec79a.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/cafe-2.jpg?");
 
 /***/ }),
 
@@ -406,7 +406,7 @@ eval("module.exports = __webpack_require__.p + \"63ab6c9f63d45daec79a.jpg\";\n\n
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"e761833e4a5fb7dbf2e8.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/clothes-1.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/e761833e4a5fb7dbf2e8.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/clothes-1.jpg?");
 
 /***/ }),
 
@@ -416,7 +416,7 @@ eval("module.exports = __webpack_require__.p + \"e761833e4a5fb7dbf2e8.jpg\";\n\n
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"ca775658999d7a251567.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/convenient_store-1.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/ca775658999d7a251567.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/convenient_store-1.jpg?");
 
 /***/ }),
 
@@ -426,7 +426,7 @@ eval("module.exports = __webpack_require__.p + \"ca775658999d7a251567.jpg\";\n\n
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"417eb380fb12bb4f07a8.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/convenient_store-2.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/417eb380fb12bb4f07a8.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/convenient_store-2.jpg?");
 
 /***/ }),
 
@@ -436,7 +436,7 @@ eval("module.exports = __webpack_require__.p + \"417eb380fb12bb4f07a8.jpg\";\n\n
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"05fc397dc5a1c6803bb2.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/convenient_store-3.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/05fc397dc5a1c6803bb2.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/convenient_store-3.jpg?");
 
 /***/ }),
 
@@ -446,7 +446,7 @@ eval("module.exports = __webpack_require__.p + \"05fc397dc5a1c6803bb2.jpg\";\n\n
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"8c2adeeb9e1d9dfe2a1b.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/convenient_store-4.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/8c2adeeb9e1d9dfe2a1b.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/convenient_store-4.jpg?");
 
 /***/ }),
 
@@ -456,7 +456,7 @@ eval("module.exports = __webpack_require__.p + \"8c2adeeb9e1d9dfe2a1b.jpg\";\n\n
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"fe109190c77d7e8ea8e9.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/drink-1.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/fe109190c77d7e8ea8e9.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/drink-1.jpg?");
 
 /***/ }),
 
@@ -466,7 +466,7 @@ eval("module.exports = __webpack_require__.p + \"fe109190c77d7e8ea8e9.jpg\";\n\n
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"08c6e4ec89d1cb9bd289.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/drink-2.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/08c6e4ec89d1cb9bd289.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/drink-2.jpg?");
 
 /***/ }),
 
@@ -476,7 +476,7 @@ eval("module.exports = __webpack_require__.p + \"08c6e4ec89d1cb9bd289.jpg\";\n\n
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"e0f3d7ea7f2b9e1e095f.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/drink-3.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/e0f3d7ea7f2b9e1e095f.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/drink-3.jpg?");
 
 /***/ }),
 
@@ -486,7 +486,7 @@ eval("module.exports = __webpack_require__.p + \"e0f3d7ea7f2b9e1e095f.jpg\";\n\n
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"96b98788e82264050f31.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/drink-4.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/96b98788e82264050f31.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/drink-4.jpg?");
 
 /***/ }),
 
@@ -496,7 +496,7 @@ eval("module.exports = __webpack_require__.p + \"96b98788e82264050f31.jpg\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"1450c53f859f0cfc4ace.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/food-1.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/1450c53f859f0cfc4ace.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/food-1.jpg?");
 
 /***/ }),
 
@@ -506,7 +506,7 @@ eval("module.exports = __webpack_require__.p + \"1450c53f859f0cfc4ace.jpg\";\n\n
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"e634082e4ceeaf9cbd3f.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/real_estate-1.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/e634082e4ceeaf9cbd3f.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/real_estate-1.jpg?");
 
 /***/ }),
 
@@ -516,7 +516,7 @@ eval("module.exports = __webpack_require__.p + \"e634082e4ceeaf9cbd3f.jpg\";\n\n
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"99e77c850ce82ea3b735.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/rental_wall.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/shops/99e77c850ce82ea3b735.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/shops/rental_wall.jpg?");
 
 /***/ }),
 
@@ -526,7 +526,7 @@ eval("module.exports = __webpack_require__.p + \"99e77c850ce82ea3b735.jpg\";\n\n
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"3dd8057d79d0c5a445e5.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/threeTone_bright.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/3dd8057d79d0c5a445e5.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/threeTone_bright.jpg?");
 
 /***/ }),
 
@@ -536,7 +536,7 @@ eval("module.exports = __webpack_require__.p + \"3dd8057d79d0c5a445e5.jpg\";\n\n
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"ae040d8cc88f9799e16e.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/tile.png?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/ae040d8cc88f9799e16e.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/tile.png?");
 
 /***/ }),
 
@@ -546,7 +546,7 @@ eval("module.exports = __webpack_require__.p + \"ae040d8cc88f9799e16e.png\";\n\n
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"2cee75b1e24de50c5e6c.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/xiaohongren.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/2cee75b1e24de50c5e6c.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/xiaohongren.jpg?");
 
 /***/ }),
 
@@ -556,7 +556,7 @@ eval("module.exports = __webpack_require__.p + \"2cee75b1e24de50c5e6c.jpg\";\n\n
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"9860ca834520c4097e04.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/xiaoluren.jpg?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/9860ca834520c4097e04.jpg\";\n\n//# sourceURL=webpack://lilium-game/./src/img/xiaoluren.jpg?");
 
 /***/ }),
 
@@ -566,7 +566,7 @@ eval("module.exports = __webpack_require__.p + \"9860ca834520c4097e04.jpg\";\n\n
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"9fd33e5f89d2ca90eca6.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/zebra_crossing.png?");
+eval("module.exports = __webpack_require__.p + \"/assets/img/9fd33e5f89d2ca90eca6.png\";\n\n//# sourceURL=webpack://lilium-game/./src/img/zebra_crossing.png?");
 
 /***/ }),
 
@@ -576,7 +576,7 @@ eval("module.exports = __webpack_require__.p + \"9fd33e5f89d2ca90eca6.png\";\n\n
   \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"3dffd4e8a2a7e5d5a48e.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/car.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/3dffd4e8a2a7e5d5a48e.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/car.fbx?");
 
 /***/ }),
 
@@ -586,7 +586,7 @@ eval("module.exports = __webpack_require__.p + \"3dffd4e8a2a7e5d5a48e.fbx\";\n\n
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"a26ebbd5728f8767c02f.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/detective_idle_walk_fall.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/a26ebbd5728f8767c02f.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/detective_idle_walk_fall.fbx?");
 
 /***/ }),
 
@@ -596,7 +596,7 @@ eval("module.exports = __webpack_require__.p + \"a26ebbd5728f8767c02f.fbx\";\n\n
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"4f0e99c493aec92922e7.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/lychee.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/4f0e99c493aec92922e7.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/lychee.fbx?");
 
 /***/ }),
 
@@ -606,7 +606,7 @@ eval("module.exports = __webpack_require__.p + \"4f0e99c493aec92922e7.fbx\";\n\n
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"09ec3ee6369231ba767d.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/mango.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/09ec3ee6369231ba767d.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/mango.fbx?");
 
 /***/ }),
 
@@ -616,7 +616,7 @@ eval("module.exports = __webpack_require__.p + \"09ec3ee6369231ba767d.fbx\";\n\n
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"f11f346b20cd88c0af6f.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/monkey.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/f11f346b20cd88c0af6f.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/monkey.fbx?");
 
 /***/ }),
 
@@ -626,7 +626,7 @@ eval("module.exports = __webpack_require__.p + \"f11f346b20cd88c0af6f.fbx\";\n\n
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"4c9153c3dcc679949213.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/peach.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/4c9153c3dcc679949213.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/peach.fbx?");
 
 /***/ }),
 
@@ -636,7 +636,7 @@ eval("module.exports = __webpack_require__.p + \"4c9153c3dcc679949213.fbx\";\n\n
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"300b16664fcef2fde15a.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/pineapple.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/300b16664fcef2fde15a.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/pineapple.fbx?");
 
 /***/ }),
 
@@ -646,7 +646,7 @@ eval("module.exports = __webpack_require__.p + \"300b16664fcef2fde15a.fbx\";\n\n
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"95451f5d5c8255014f5d.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/simplescooter.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/95451f5d5c8255014f5d.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/simplescooter.fbx?");
 
 /***/ }),
 
@@ -656,7 +656,7 @@ eval("module.exports = __webpack_require__.p + \"95451f5d5c8255014f5d.fbx\";\n\n
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"b3f48983153bc6fb4026.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/toyotarav4.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/b3f48983153bc6fb4026.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/toyotarav4.fbx?");
 
 /***/ }),
 
@@ -666,7 +666,7 @@ eval("module.exports = __webpack_require__.p + \"b3f48983153bc6fb4026.fbx\";\n\n
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"0c94b2341f1d0d620363.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/trafficlight_hole.fbx?");
+eval("module.exports = __webpack_require__.p + \"/assets/models/0c94b2341f1d0d620363.fbx\";\n\n//# sourceURL=webpack://lilium-game/./src/models/trafficlight_hole.fbx?");
 
 /***/ }),
 
