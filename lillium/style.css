@@ -107,13 +107,16 @@ canvas {
     display: block;
     touch-action: none;
     cursor: pointer;
+    background-image: url("./img/UI/d-pad.png");
+    background-position: right center;
+    background-size: contain;
+
 }
 
 #virtual-console {
-    background-color:  #FFC300;
+    background-color: #fe7761;
     padding-bottom: 32px;
-    
-    touch-action:none; /*manipulation*/
+    touch-action: none; /*manipulation*/
 }
 
 #controls {
@@ -134,22 +137,22 @@ canvas {
 }
 
 #r-button {
-    background-color: gray;
-    top:0px;
-    right:0px;
+    background-color: #9934fe;
+    top: 0px;
+    right: 0px;
 }
 #l-button {
-    background-color: black;
+    background-color: #ffd800;
     right: 22%;
-    top:28%;
+    top: 28%;
 }
 
 #end-button {
     display: block;
     border-radius: 32px;
-    background-color: #cc2222;
-    width: 128px;
-    height: 48px;
+    background-color: white;
+    width: 20%;
+    aspect-ratio: 2.8 / 1;
     margin: auto;
     bottom: 4px;
     position: relative;
@@ -159,5 +162,5 @@ canvas {
 .pressed-button {
     border-style: solid;
     border-width: 2px;
-    border-color: red;
+    border-color: white;
 }
