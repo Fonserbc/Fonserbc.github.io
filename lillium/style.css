@@ -103,6 +103,7 @@ canvas {
 
 #dpad {
     width: 40%;
+    aspect-ratio: 1 / 1;
     margin: 12px;
     display: block;
     touch-action: none;
@@ -110,7 +111,6 @@ canvas {
     background-image: url("./img/UI/d-pad.png");
     background-position: right center;
     background-size: contain;
-
 }
 
 #virtual-console {
@@ -163,4 +163,45 @@ canvas {
     border-style: solid;
     border-width: 2px;
     border-color: white;
+}
+.button {
+    background-position: center;
+    background-size: contain;
+}
+
+.b-camera {
+    background-image: url("./img/UI/camera.png");
+}
+.b-picture {
+    background-image: url("./img/UI/picture.png");
+}
+.b-return {
+    background-image: url("./img/UI/return2.png");
+}
+.b-return2 {
+    background-image: url("./img/UI/return.png");
+}
+.b-rightarrow {
+    background-image: url("./img/UI/rightarrow.png");
+}
+.b-run {
+    background-image: url("./img/UI/run.png");
+}
+.b-share {
+    background-image: url("./img/UI/share.png");
+}
+.b-skip {
+    background-image: url("./img/UI/skip.png");
+}
+.b-submit {
+    background-image: url("./img/UI/submit.png");
+}
+.b-takeapic {
+    background-image: url("./img/UI/takeapic.png");
+}
+.b-view {
+    background-image: url("./img/UI/view_circle.png");
+}
+.b-view-small {
+    background-image: url("./img/UI/view_small.png");
 }
