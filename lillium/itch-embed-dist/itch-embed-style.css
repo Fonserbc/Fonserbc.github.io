@@ -11,7 +11,7 @@ body {
 #itch-iframe {
     display: block;
     margin:auto;
-    width: min(65vh - 14.3px, 1024px);
+    width: min(65vh - 14.3px, 100%);
     min-height:100%;
     border:none;
     padding:0;
