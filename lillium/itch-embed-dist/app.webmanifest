@@ -1,0 +1,23 @@
+﻿{
+    "name": "Monkey Catching Game",
+    "short_name": "Monkey",
+    "description": "Catch the monkey",
+    "icons": [
+        {
+            "src": "temp-icon.jpg",
+            //"sizes": "512x512",
+            "type": "image/jpg"
+        },
+        {
+            "src": "img/temp-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./",
+    "scope": ".",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "white",
+    "background_color": "black"
+}
