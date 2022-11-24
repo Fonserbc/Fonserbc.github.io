@@ -25,16 +25,18 @@
         <div id="virtual-console">
             <canvas id="canvas"></canvas>
             <div id="controls">
-                <span id="dpad"><div id="dpad-icons"></div></span>
-                <span class="button round-button" id="r-button"></span>
-                <span class="button round-button" id="l-button"></span>
-                <span id="end-button" class="button"></span>
+                <span id="dpad" class="selectDisable"><div id="dpad-icons"  class="selectDisable"></div></span>
+                <span id="r-button" class="button round-button selectDisable" ></span>
+                <span id="l-button" class="button round-button selectDisable" ></span>
+                <span id="end-button" class="button selectDisable"></span>
             </div>
 
             <!-- Debug resolution -->
+            <!--
             <div style="position:fixed; display:none; bottom:0; left:0;right:0;align-items:center;">
                 <p id="resolution">800x600</p>
             </div>
+            -->
         </div>
 
         <!--
@@ -42,10 +44,11 @@
             <p class="centered-p">800x600</p>
         </div>
         -->
-
+        <!--
         <button id="fullscreen-button" onclick="window.toggleFullScreen()">
             Fullscreen
         </button>
+        -->
     </div>
 
     <!-- <script type="text/javascript" src="lib/fastcomp-old/asm.js/fmodstudioL.js"></script> -->
