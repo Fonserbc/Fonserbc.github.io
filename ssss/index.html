@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Solar System String Sequencer</title>
+    <script type="module" crossorigin src="/assets/index-CbPlsDrO.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CVuLACtS.css">
+  </head>
+  <body>
+    <div id="canvas-container">
+        <canvas id="canvas" class="selectDisable"></canvas>
+    </div>
+    <div id="safe-area">
+      <div id="overlay-ui">
+      <h1>Solar System String Sequencer</h1>
+      <p id="version">v2026.1.16</p>
+      <div id="instructions">
+        <div id="tuto" class="instructionBlock"><u>click & drag</u>  to build strings between celestial bodies,</div>
+        <div id="time" class="instructionBlock">
+          <div id="timeDesc">time passing at 12 days/s,</div>
+          <input type="range" min="0.05" max="365" step="0.05" class="slider" value="12" id="timeSlider">
+        </div>
+        <div id="speed" class="instructionBlock">
+          <div id="speedDesc">string wave moving at c</div>
+          <input type="range" min="0.001" max="1" step="0.001" value="1" class="slider" id="velocitySlider">
+        </div>
+      </div>
+      <div id="planets">
+      </div>
+      <div id="actions">
+        <p id="space">[Spacebar] toggle top-down view</p>
+        <p id="delete">[Delete] all strings  from selected</p>
+        <p id="all">[A]dd all strings from selected</p>
+        <p id="debug">toggle [D]ebug</p>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+Textures taken from both NASA-3D resources https://github.com/nasa/NASA-3D-Resources and across the web over the years on lost sources.
