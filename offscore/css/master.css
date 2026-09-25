@@ -26,9 +26,9 @@ body {
 \* ---------------------------------------------------------- */
 
 html {
-  color: #444444;
+  color: rgba(22, 22, 22, 0.8);
 
-  font: 62.5%/1.6 "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font: 80%/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Vazirmatn, Courier New, monospace;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 
 h1,
 h2 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: ui-monospace, sfmono-regular, menlo, monaco, consolas, liberation mono, vazirmatn, courier new, monospace;
   font-weight: normal;
 }
 
@@ -129,25 +129,43 @@ body {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+@media (max-width: 600px) {
+   .page {
+     flex-direction: column-reverse;
+   }
+
+   .nav__title {
+     display: none;
+    }
 }
 
 @media (min-width: 800px) {
-  .page {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
   .page-nav {
     min-width: 25%;
+    max-width: 25%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
   }
 
   .page-wrapper {
     max-width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
   }
 
-  .factsheet {
-    min-width: 33%;
+  .factsheet__list {
+    display: grid;
+    grid-gap: 1em;
+	grid-template: auto / 20em 1fr;
   }
 }
 
@@ -172,15 +190,22 @@ body {
 
 a,
 a:visited {
-  color: #0077dd;
+  color: #70acc7;
 
   text-decoration: none;
 }
 
 a:hover {
-  color: #005599;
+  color: #70acc7;
 
   text-decoration: underline;
+}
+
+a.button-secondary,
+a.button-secondary:visited,
+a.button-secondary:hover {
+  color: rgba(22, 22, 22, 0.8);
+  text-decoration: none;
 }
 
 a:focus {
@@ -237,14 +262,15 @@ a:hover {
 .nav__item:visited {
   display: block;
 
-  padding: 5px 15px;
+  padding: 1rem;
 
   color: inherit;
 }
 
 .nav__item:hover {
   color: inherit;
-  background: rgba(0, 0, 0, 0.05);
+  background: #f9fafb;
+  border-radius: 1.7rem;
 
   text-decoration: none;
 }
@@ -254,47 +280,6 @@ a:hover {
   outline: none;
 }
 
-/* ---------------------------------------------------------- *\
- * Nav - Hamburger.
-\* ---------------------------------------------------------- */
-
-.nav__toggle {
-  display: none;
-
-  margin: 15px 0;
-  padding: 0 15px;
-}
-
-.nav__toggle .button {
-  display: block;
-
-  height: 30px;
-}
-
-/* Nav list variant for hamburger feature. */
-.nav__list--slider {
-  overflow-y: hidden;
-
-  max-height: 0;
-
-  -webkit-transition: max-height 0.5s ease-in-out;
-     -moz-transition: max-height 0.5s ease-in-out;
-       -o-transition: max-height 0.5s ease-in-out;
-          transition: max-height 0.5s ease-in-out;
-}
-
-
-@media (min-width: 800px) {
-  .nav__toggle {
-    /* Always hide the button on big screens. */
-    display: none !important;
-  }
-
-  .nav__list--slider {
-    /* Always show the list on big screens. So disable slider. */
-    max-height: unset !important;
-  }
-}
 
 /* ---------------------------------------------------------- *\
  * Components - Block.
@@ -311,10 +296,9 @@ a:hover {
   margin-bottom: 15px;
   padding: 10px;
 
-  color: #027194;
-  background: #ebf7fd;
-  border: 1px solid rgba(45,112,145,0.3);
-  border-radius: 4px;
+  color: rgba(22, 22, 22, 0.8);
+  background: #70acc7;
+  border-radius: 1rem;
 }
 
 .block__notice a {
@@ -322,43 +306,30 @@ a:hover {
 }
 
 /* ---------------------------------------------------------- *\
- * Components - Grid.
-\* ---------------------------------------------------------- */
-
-@media (min-width: 800px) {
-  .grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .grid__item:not(:first-child) {
-    padding-left: 25px;
-  }
-
-  .grid__item--flexible {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-        flex: 1;
-  }
-}
-
-/* ---------------------------------------------------------- *\
  * Components - Images Gallery.
 \* ---------------------------------------------------------- */
 
 .gallery {
-  margin-left: -25px;
-
-  font-size: 0; /* Disable the small space below the images. */
+  margin-top: 2rem;
+  width: 100%;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1;
 }
 
 .gallery__item {
-  float: left;
-
+  display: inline-block;
   width: 100%;
-  padding-bottom: 25px;
-  padding-left: 25px;
+}
+
+@media  (min-width:800px) {
+    .gallery {
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+    }
 }
 
 .gallery__item img {
@@ -368,7 +339,7 @@ a:hover {
 .gallery__item a[href$=".gif"] {
   position: relative;
 
-  display: block;
+  display: inline-block;
 }
 
 .gallery__item a[href$=".gif"]:focus:active {
@@ -397,12 +368,6 @@ a:hover {
 
 .gallery__item a[href$=".gif"].show-overlay::after {
   display: flex;
-}
-
-@media (min-width: 500px) {
-  .gallery__item {
-    width: 50%;
-  }
 }
 
 /* ---------------------------------------------------------- *\
@@ -460,18 +425,17 @@ a:hover {
 
 .button {
   display: inline-block;
-
-  padding: 5px 10px;
-
-  background: -webkit-linear-gradient(top, white, #fafafa);
-  background:         linear-gradient(to bottom, white, #fafafa);
-  border: 1px solid #cccccc;
+  padding: 1em;
+  background-color: rgb(209, 193, 215);
   border-radius: 5px;
+  color: rgba(22, 22, 22, 0.8);
 }
 
 .button:hover {
   cursor: pointer;
   text-decoration: none;
+  color: rgba(22, 22, 22, 0.8);
+  background-color: #b0a3b5;
 }
 
 .button:focus {
@@ -480,6 +444,32 @@ a:hover {
 }
 
 .button:active {
+  color: white;
+  background: -webkit-linear-gradient(top, #3398ff, #0077dd);
+  background:         linear-gradient(to bottom, #3398ff, #0077dd);
+}
+
+.button-secondary {
+  display: inline-block;
+  padding: 1em;
+  color: rgba(22, 22, 22, 0.8);
+  background-color: #70acc7;
+  border-radius: 5px;
+}
+
+.button-secondary:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(22, 22, 22, 0.8);
+  background-color: #7faabe;
+}
+
+.button-secondary:focus {
+  border: 1px solid #3398ff;
+  outline: none;
+}
+
+.button-secondary:active {
   color: white;
   background: -webkit-linear-gradient(top, #3398ff, #0077dd);
   background:         linear-gradient(to bottom, #3398ff, #0077dd);
