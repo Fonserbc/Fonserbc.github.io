@@ -79,14 +79,15 @@
 			top: 0px;
 			height: 512px;
 			cursor: pointer;
+			height: 683px;
 		}
 
 		#portrait-container {
-			background-image: url(/images/2024_Ferran_ks_square512.JPG);
+			background-image: url(/images/eclipsi_512w.jpg);
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
-			height: 512px;
+			height: 683px;
 		}
 
 		#links a {
@@ -163,7 +164,7 @@
 		<h1>Ferran Bertomeu Castells</h1>
 		<h2>games - art - music</h2>
 		<p id="portrait-container">
-			<img id="looking-portrait" class="portrait hidden" src="images/ferran_nomi.jpg" />
+			<img id="looking-portrait" class="portrait hidden" src="images/eclips_lookingi_512w.jpg" />
 		</p>
 		<h2>links</h2>
 		<p id="links">
@@ -290,7 +291,7 @@
 
 		let brushes = [];
 
-		let hues = [224];//, 190,217];
+		let hues = [51.1];//[224];//, 190,217];
 		let currentHue = 0;
 		let lastHue = 0;
 		let hueTime = 1;
@@ -302,8 +303,8 @@
 		let needCheckResize = true;
 		let showingFace = false;
 		function checkWindowResize() {
-            let w = document.body.clientWidth;
-			let h = document.body.clientHeight;
+            let w = canvas.clientWidth;
+			let h = canvas.clientHeight;
 			if (w != width || h != height) {
 
 				let temp = ctx.getImageData(0, 0, width, height);
@@ -359,9 +360,9 @@
 			if (showingFace)
 			{
 				hue = 8.4;
-				saturation = (50 + (Math.sin(time * 0.1) + 1) / 2 * 40)
+				saturation = (46 + (Math.sin(time * 0.1) + 1) / 2 * 40)
 			}
-            let color = `hsl(${hue},${saturation}%, ${(60 + (Math.cos(time * 0.3) + 1) / 2 * 30)}%)`;
+            let color = `hsl(${hue},${saturation}%, ${(70 + (Math.cos(time * 0.3) + 1) / 2 * 25)}%)`;
 			ctx.strokeStyle = color;
 
 			timedTurnCountdown -= deltaTime;
